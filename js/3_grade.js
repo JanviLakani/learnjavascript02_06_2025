@@ -2,7 +2,7 @@
 let per=parseInt(prompt("please enter your per : "));
 
 
-let grade;
+let grade = '';
 
 
 if (per >= 91 && per <= 100) {

@@ -4,6 +4,7 @@ let unit=parseFloat(prompt("please enter unit : "));
 console.log(unit);
 
 let bill;
+let finalbill;
 
 if (unit <= 50) {
     bill = unit * 0.50;
@@ -15,6 +16,6 @@ if (unit <= 50) {
     bill= unit*0.50 + unit*0.75 + unit*1.20 + (unit - 250) * 1.50;
 }
 
-bill = bill*1.20;
+finalbill = bill + bill*0.20;
 
 console.log("your bill is : " , bill);
