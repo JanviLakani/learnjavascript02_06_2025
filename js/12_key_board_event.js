@@ -30,7 +30,7 @@ function handlekeyup(){
 
 // / _________________________________________________________________ 3 
 
-// keyup press 3
+// keypress event 3
 
 
 function handlekeypress(){
