@@ -281,15 +281,16 @@
 
 // 6. 
 
-// {
-//    let x = 10;
-// }
+"use strict";
+{
+   let x = 10;
+}
 
-// {
-//     x = 11;
-// }
+{
+    x = 11;     //hoisting
+}
 
-// console.log(x);   // ans 11 aa raha hai to eroor nahi aani sahiye kyuki block ke andar hai to 
+console.log(x);   // ans 11 aa raha hai to eroor nahi aani sahiye kyuki block ke andar hai to 
 
 
 // _______________________________________________________ 
@@ -357,7 +358,7 @@
 
 // 11
 
-// but we not change object // reference not change ans error 
+// but we can not change object // reference not change ans error 
 
 // const car = {
 //     name : "toyoto",
