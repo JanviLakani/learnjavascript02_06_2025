@@ -63,6 +63,21 @@
 
 // String 
 
+let a = 10;
+let b = "2";
+
+let c = a + b;
+
+console.log(c);
+
+console.log(4 + 5 + "6");  // ans 96
+
+console.log("2" + 3 + 4);  // ans 234
+
+console.log(1 + 2 + "5" + 4 + 2);  // ans 2542
+
+
+
 
 
 

@@ -4,7 +4,7 @@
 
 // function handleonload(){
     
-//     alert("page is a onload");
+//     alert("page is onload");
     
 // }
 
@@ -44,3 +44,32 @@
 
 
 // ___________________________________________________ 
+
+
+// class work window load , unload ,and window resize  
+// 1. onload event 
+
+window.onload =function(){
+    console.log("window is onload ");
+    
+}
+
+// _______________________________________________ 
+
+// 2. onunload event 
+
+window.onunload =function(){
+    console.log("windown is on unload");
+    
+}
+
+// ________________________________________________ 
+
+// 3 onresize window event 
+
+window.onresize=function(){
+    console.log(window.innerHeight,window.innerHeight);
+    
+}
+
+

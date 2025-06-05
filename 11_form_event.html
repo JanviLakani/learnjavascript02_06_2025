@@ -6,22 +6,37 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- 1 _________________________________________________________________________  -->
 
-    <!-- 1 _________________________________________________________________________  --> 
-
-     <!-- onfocus and onblur event  -->
-
-
-
+    <h3>onfocus and onblur event....this</h3>
 
     <form action="">
-      name :- <input type="text" id="fname" onfocus="handlefocus(this)" onblur="handleblur(this)"/> <br />
+      name :-
+      <input
+        type="text"
+        id="fname"
+        onfocus="handlefocus(this)"
+        onblur="handleblur(this)"
+      />
+      <br />
       <br />
 
-      class :- <input type="text" id="lname"  onfocus="handlefocus(this)" onblur="handleblur(this)" /> <br />
+      class :-
+      <input
+        type="text"
+        id="lname"
+        onfocus="handlefocus(this)"
+        onblur="handleblur(this)"
+      />
+      <br />
       <br />
 
-      <select name="" id="country"  onfocus="handlefocus(this)" onblur="handleblur(this)">
+      <select
+        name=""
+        id="country"
+        onfocus="handlefocus(this)"
+        onblur="handleblur(this)"
+      >
         <option value="">-- Select Country --</option>
         <option value="">India</option>
         <option value="">Germany</option>
@@ -30,51 +45,78 @@
       </select>
     </form>
 
-    <br>
-    <hr>
+    <br />
+    <hr />
 
     <!-- 2 ______________________________________________________________________________  -->
 
-     <!-- onfocus and onblur event  -->
+    <h3>onfocus and onblur event</h3>
 
     <form action="">
-        name :- <input type="text" id="fname1" placeholder="eneter your first name" onfocus="handleonfocuse('fname1')"  onblur="handleonblur('fname1')"> <br><br>
+      name :-
+      <input
+        type="text"
+        id="fname1"
+        placeholder="enter your first name"
+        onfocus="handleonfocuse('fname1')"
+        onblur="handleonblur('fname1')"
+      />
+      <br /><br />
 
-        surname :- <input type="text" id="lname1" placeholder="enter your last name" onfocus="handleonfocuse('lname1')" onblur="handleonblur('lname1')">  <br><br>
+      surname :-
+      <input
+        type="text"
+        id="lname1"
+        placeholder="enter your last name"
+        onfocus="handleonfocuse('lname1')"
+        onblur="handleonblur('lname1')"
+      />
+      <br /><br />
 
-        <select name="" id="fruits" onfocus="handleonfocuse('fruits')" onblur="handleonblur('fruits')">
-            <option value="">--Select Fruits--</option>
-            <option value="">Banana</option>
-            <option value="">Mango</option>
-            <option value="">Orange</option>
-            <option value="">Grapes</option>
-        </select>  <br><br>
+      <select
+        name=""
+        id="fruits"
+        onfocus="handleonfocuse('fruits')"
+        onblur="handleonblur('fruits')"
+      >
+        <option value="">--Select Fruits--</option>
+        <option value="">Banana</option>
+        <option value="">Mango</option>
+        <option value="">Orange</option>
+        <option value="">Grapes</option>
+      </select>
+      <br /><br />
 
-        <input type="submit">
-
+      <input type="submit" />
     </form>
-
 
     <!-- 3__________________________________________________________________________  -->
 
-    <hr>
+    <hr />
+
+    <h3>//submit // onchange</h3>
 
     <form action="" onsubmit="handlesubmit()">
-        <input type="text" name="" id="fcountry" placeholder="your country address">  <br><br>
+      <input
+        type="text"
+        name=""
+        id="fcountry"
+        placeholder="your country address"
+      />
+      <br /><br />
 
-        <select name="" id="changecontru" onchange="handlechange()"> 
-            <option value="0">-SELECT COUNTRY-</option>
-            <option value="canada">CANADA</option>
-            <option value="USA">AMERICA</option>
-            
-        </select> <br><br>
+      <select name="" id="changecontru" onchange="handlechange()">
+        <option value="0">-SELECT COUNTRY-</option>
+        <option value="canada">CANADA</option>
+        <option value="USA">AMERICA</option>
+      </select>
+      <br /><br />
 
-        <input type="submit"> 
+      <input type="submit" />
     </form>
 
-
     <!-- __________________________________________________________________________________  -->
-<!-- 
+    <!-- 
     <form action="">
           <select name="" id="" onchange="handlechange()"> 
             <option value="0">-SELECT COUNTRY-</option>
@@ -84,20 +126,8 @@
         </select> <br><br>
     </form> -->
 
-
     <!-- ________________________________________________________________________________________  -->
-
-
-    
-
-
-
-
-
-
-
-
 
     <script src="js/11_form_event.js"></script>
   </body>
-</html>     
+</html>

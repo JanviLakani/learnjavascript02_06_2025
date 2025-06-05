@@ -5,12 +5,7 @@
 function handlekeydown(){
 
     let keydown=document.getElementById("fname").value;
-    console.log(keydown);
-
-
-    // console.log("keydown");
-    
-    
+    console.log(keydown);   
 }
 
 // _________________________________________________________________ 2
@@ -21,11 +16,8 @@ function handlekeydown(){
 function handlekeyup(){
 
     const keyup=document.getElementById("lname").value;
-    console.log("keyup");
-
-    // console.log(keyup);
-    
-    
+    console.log(keyup);
+      
 }
 
 // / _________________________________________________________________ 3 
@@ -36,11 +28,8 @@ function handlekeyup(){
 function handlekeypress(){
  const keypress=document.getElementById("city").value;
 
- console.log("keypress");
-
-//  console.log(keypress);
- 
- 
+ console.log(keypress);
+  
 }
 
 
