@@ -19,7 +19,7 @@ function validateForm(){
     
     
     
-    
+    // _____________________________________________________name 
 
     // if (name == "") {
     //     document.getElementById("nameErr").innerHTML="enter your name"
@@ -32,6 +32,8 @@ function validateForm(){
     //          document.getElementById("nameErr").innerHTML="please enter velid mobile number"
     //     }
     // }
+
+    // ____________________________________________________email 
 
     // if(email == "") {
     //     document.getElementById("emailErr").innerHTML="enter your email id"
@@ -78,6 +80,8 @@ function validateForm(){
     //     }
     // }
 
+    // _____________________________________________________ hobbies
+
     let hobbiescounter=0;
 
     for (let i=0; i<hobbies.length; i++) {
@@ -93,6 +97,39 @@ function validateForm(){
     } else {
         document.getElementById("hobbyErr").innerHTML="";
     }
+
+    const pass=document.getElementById("pass").value
+
+    // ________________________________________________________ password
+
+    console.log(pass);
+
+    if(pass == "") {
+        document.getElementById("geterror").innerHTML="please enter your password"
+    } else {
+         let passregex=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+         if(passregex.test(pass)) {
+            document.getElementById("geterror").innerHTML=""
+         } else {
+            document.getElementById("geterror").innerHTML="please enter your velid password"
+         }
+    } 
+    
+
+    // _________________________________________________ OTHER 
+
+    const con=document.getElementById("country1").value;
+    console.log(con);
+
+    if(con == "0") {
+         alert("select country");
+        return false;
+       
+    } else {
+        return true
+    }
+    
 
 
 

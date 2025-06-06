@@ -58,4 +58,9 @@ console.log(f , typeof f);  // ans object
 
 
 
+// let text;
+// const myArray = text.split("");
+
+// console.log(myArray);
+
 
