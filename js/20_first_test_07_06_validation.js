@@ -43,7 +43,7 @@ function handleonsubmit() {
   } else {
     let newpassregex = /^(?=.*[0-8])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
 
-    console.log("hello", newpassregex.test(newpassword));
+    
 
     if (newpassregex.test(newpassword)) {
      
@@ -82,7 +82,7 @@ function handleonsubmit() {
     if (addressLength > 3) {
       document.getElementById("addresserr").innerHTML ="address must be only 3 word";
     } else {
-      document.getElementById("addresserr").innerHTML = "";
+      document.getElementById("addresserr").innerHTML = '';
     }
   }
 
