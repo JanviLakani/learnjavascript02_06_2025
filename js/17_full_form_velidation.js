@@ -35,17 +35,17 @@ function validateForm(){
 
     // ____________________________________________________email 
 
-    // if(email == "") {
-    //     document.getElementById("emailErr").innerHTML="enter your email id"
-    // } else {
-    //     const regex1 =/^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if(email == "") {
+        document.getElementById("emailErr").innerHTML="enter your email id"
+    } else {
+        const regex1 =/^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-    //     if(regex1.test(email)) {
-    //          document.getElementById("emailErr").innerHTML="";
-    //     } else {
-    //         document.getElementById("emailErr").innerHTML="please enter                                                                                                                                  velid email"
-    //     }
-    // }
+        if(regex1.test(email)) {
+             document.getElementById("emailErr").innerHTML="";
+        } else {
+            document.getElementById("emailErr").innerHTML="please enter                                                                                                                                  velid email"
+        }
+    }
 
     // ________________________________________________________ 
 
@@ -53,32 +53,32 @@ function validateForm(){
 
     // __________________________________________________________ 
 
-    // if (mobile == "") {
-    //     document.getElementById("mobileErr").innerHTML="enter your mobil number"
-    // } else {
-    //     const regex2 =/^[7-9][0-9]{9}$/;
+    if (mobile == "") {
+        document.getElementById("mobileErr").innerHTML="enter your mobil number"
+    } else {
+        const regex2 =/^[7-9][0-9]{9}$/;
 
-    //     if(regex2.test(mobile)) {
-    //         document.getElementById("mobileErr").innerHTML="";
-    //     } else {
-    //         document.getElementById("mobileErr").innerHTML="please enter velid email"
-    //     }
-    // }
+        if(regex2.test(mobile)) {
+            document.getElementById("mobileErr").innerHTML="";
+        } else {
+            document.getElementById("mobileErr").innerHTML="please enter velid email"
+        }
+    }
 
     // _________________________________________________________ 
 
     // not use regular expression ____ email validation
 
 
-    // if (mobile == "") {
-    //     document.getElementById("mobileErr").innerHTML="enter your mobile number"
-    // } else{
-    //     if((isNaN(mobile)) || (mobile.length != 10 )) {
-    //         document.getElementById("mobileErr").innerHTML="enter your velid mobile number"
-    //     } else {
-    //         document.getElementById("mobileErr").innerHTML="";
-    //     }
-    // }
+    if (mobile == "") {
+        document.getElementById("mobileErr").innerHTML="enter your mobile number"
+    } else{
+        if((isNaN(mobile)) || (mobile.length != 10 )) {
+            document.getElementById("mobileErr").innerHTML="enter your velid mobile number"
+        } else {
+            document.getElementById("mobileErr").innerHTML="";
+        }
+    }
 
     // _____________________________________________________ hobbies
 
