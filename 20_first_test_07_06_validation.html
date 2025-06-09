@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <form action="" onsubmit="handleonsubmit()" name="applicationform">
+    <form action="abc.js" onsubmit="return handleonsubmit()" name="applicationform">
         <input type="number" name="age" id="age" placeholder="Enter your age">
 
         <span id="ageerr" class="color"></span>
@@ -29,9 +29,13 @@
         <span id="newpasserr" class="color"></span>
         <br><br>
 
-        <input type="file" name="file" id="file">
+        <!-- file -->
 
-        <span id="fileerr" class="color"></span> <br><br>
+        <input type="file" name="profile" id="file">
+
+        <span id="profileerr" class="color"></span> <br><br>
+
+        <!-- file -->
 
         <input type="text" name="address" id="address" placeholder="please enter your address">
 

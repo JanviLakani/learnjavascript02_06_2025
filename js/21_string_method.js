@@ -1,4 +1,6 @@
 
+
+
 // 1 concat()
 
 // let x = "janvi"
@@ -53,29 +55,29 @@
 // 6 slice()
 
 
-// let str="hello javascript"
+// let str="hellojavascript"
 
-// let abc=str.slice("5","8");
+// let abc=str.slice(3,6);
 
-// console.log(abc);  //  ans ja
+// console.log(abc);  //  ans loj
 
 // _______________________________________________________ 
 // 7 substring()
 
 // let str="hellojavascript"
 
-// let abc=str.substring("3","6");
+// let abc=str.substring(3,6);
 
 // console.log(abc);  // ans loj
 
 // _______________________________________________________ 
 
 // 8 substr()
-// let str1="hello javascript"
+// let text="hellojavascript"
 
-// let abc=str1.substr(1,4);
+// let abc=text.substr(3,6);
 
-// console.log(abc);  // ans index 1 thi 4 suthi all cover 
+// console.log(abc);  
 // _______________________________________________________ 
 
 // 9 replace()
@@ -119,7 +121,7 @@
 // let abc=str.match(/is/g);
 
 // console.log(abc);  //ans is is array
-// _______________________________________________________ 
+// // _______________________________________________________ 
 // 14 test()  regex check 
 
 // let str="hello hello javascript"
@@ -148,3 +150,111 @@
 // let v = b.toUpperCase()
 
 // console.log(b);
+
+
+// __________________________________________________________ 
+
+// string method class work 
+
+// let str="hello world"
+
+//slice
+// console.log(str.slice(0,5));
+// console.log(str.slice(-6,-1)); 
+// console.log(str.slice(5,0));
+
+
+// _____________________________________ 
+
+// // substring
+// console.log(str.substring(0,5));
+// console.log(str.substring(-6,-1)); //not supported nagative
+// console.log(str.substring(6,0)); // swapped
+
+// _____________________________________ 
+
+// // substr  // outed not use in substr method 
+// console.log(str.substr(0,5));  
+// console.log(str.substr(-6,5));  // used a start position and length
+
+// _____________________________________  
+
+// split 
+
+// let str="hello world";
+
+// console.log(str.split("")); //chutta kari aapshe
+
+// console.log(str.split(" ")); //array ma hello and world kari aapshe 
+// _____________________________________  
+
+// match
+
+
+// let str="hello world";
+
+// console.log(str.match("llo"));
+// console.log(str.match("hello"));  // hello aapshe 
+
+// test  like exprestions
+
+// let str="hello word";
+
+// let patt=/hello/
+
+// let result=patt.test("hello");
+
+// console.log(result); 
+
+// _______________________________________ 
+
+// tolowercase
+
+// let str="hello WORLD";
+
+// console.log(str.toLowerCase());
+
+// __________________________________________ 
+
+// touppercase 
+// let str = "hello javascript"
+// console.log(str.toUpperCase());
+
+let str="hello world"
+
+console.log(str); // same string return karshe 
+
+
+let s1=new String("hello world")
+
+console.log(s1);  // onject return karshe last koi bhi string object j thai chhe 
+
+
+console.log("amit" > "ajay");  // a to same j chhe and m karta j pela aave chhe  so amit is greater than ajay 
+
+console.log("janvi" > "bansi");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
