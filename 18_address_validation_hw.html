@@ -1,3 +1,48 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color{
+            color: red;
+        }
+    </style>
+</head>
+<body>
 
+    <form action="abc_js" name="applicationform" onsubmit="return handleonsubmit()">
+        <input type="text" name="age" id="age" placeholder="enter your age ">
+
+        <span id="ageerr" class="color"></span> <br><br>
+
+        <input type="text" name="mobile" placeholder="enter your number">
+
+        <span id="numerr" class="color"></span> <br><br>
+
+        <input type="password" name="password" placeholder="enter your pass word">
+
+        <span id="passerr" class="color"></span><br><br>
+
+        <input type="password" name="newpassword" placeholder="enter your newpassword">
+
+        <span id="newpasserr" class="color"></span> <br><br>
+
+        <input type="file" name="profile" id="profile"> 
+
+        <span id="fileerr" class="color"></span> <br><br>
+<!-- 
+        <input type="text" name="address" id="address" placeholder="enter your address">
+
+        <span id="addresserr" class="color"></span><br><br> -->
+
+        <input type="submit">
+     </form>
+    
+
+    <script src="js/18_address_validation_hw.js"></script>
+</body>
+</html>
 
