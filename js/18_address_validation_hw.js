@@ -109,13 +109,9 @@ function handleonsubmit(){
     
 
     if( profileerr) {
-        return false
+        return false;
     } else {
-        return true
+        return true;
     }
-
-
-
-    
 
 }
