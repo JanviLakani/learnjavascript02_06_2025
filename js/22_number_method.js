@@ -11,7 +11,16 @@
 
 // console.log(x);
 
-// tofixed()
+
+// The toString() method can take an optional radix argument to convert
+//  the number to a different base:
+
+let y=123;
+
+let text=y.toString(7);
+
+console.log(text); // ans 
+
 
 
 // __________________________________________________________ 

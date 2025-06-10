@@ -26,6 +26,8 @@
 // console.log("getTimezoneOffset",today.getTimezoneOffset());  // -330
 
 
+
+
 // set date method 
 
 
@@ -44,20 +46,63 @@
 
 // _______________________________________________________ 
 
-let text;
-let date = new Date();
+// let text;
+// let date = new Date();
 
-let futuredate=new Date();
+// let futuredate=new Date();
 
-futuredate.setDate(2027 ,5,6);
+// futuredate.setDate(2027 ,5,6);
 
-if(futuredate > date) {
-    text = "greater date";
-} else {
-    text = "less date";
+// if(futuredate > date) {
+//     text = "greater date";
+// } else {
+//     text = "less date";
+// }
+
+// console.log(text);
+
+
+// ____________________________________________ 
+
+// let d=new Date();
+
+// console.log(d.toDateString());
+// console.log(d.toLocaleDateString());
+// console.log(d.toLocaleTimeString());
+// console.log(d.getUTCDate());
+// console.log(d.getTimezoneOffset()); 
+
+// __________________________________________________ 
+
+let d1 = new Date("2025,6,30");
+let d2 =new Date()
+
+// d2.setDate("2025-7-20");
+
+// if (d2 > d1) {
+//     console.log("ans is correct");
+    
+// } else {
+//     console.log("ans is incorrect");
+    
+// }
+
+
+for (let i=d2; i<d1;  d1.setDate(d2.getDate() + 1)) {
+   console.log( d1.setDate(d2.getDate() + 1));
+   
+   
 }
 
-console.log(text);
+
+
+
+
+
+
+
+
+
 
 
 
