@@ -74,8 +74,25 @@
 
 // __________________________________________________ 
 
-let d1 = new Date("2025,6,30");
-let d2 =new Date()
+// let d1 = new Date("2025,6,30");
+// let d2 =new Date()
+
+// for (let i=d2; i<d1;  d1.setDate(d2.getDate() + 1)) {
+//    console.log( d1.setDate(d2.getDate() + 1));
+   
+   
+// }
+
+// let startDate = new Date();              // Aaj ki date
+// let endDate = new Date(2025, 5, 30);     // 30 June 2025 (month 0-based)
+
+// for (let d = startDate; d <= endDate; d.setDate(d.getDate() + 1)) {
+//     console.log(d.toLocaleDateString());
+// }
+
+
+
+
 
 // d2.setDate("2025-7-20");
 
@@ -88,22 +105,16 @@ let d2 =new Date()
 // }
 
 
-for (let i=d2; i<d1;  d1.setDate(d2.getDate() + 1)) {
-   console.log( d1.setDate(d2.getDate() + 1));
-   
+
+
+
+let d1=new Date();
+let d2=new Date(2025,5,30);
+
+for(i=d1; i<=d2; i.setDate(i.getDate()+1)) {
+   console.log(i.toLocaleDateString());
    
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
