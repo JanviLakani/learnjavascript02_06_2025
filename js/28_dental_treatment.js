@@ -46,9 +46,12 @@ function handleChange() {
 `;
 
     document.getElementById("disk").innerHTML = print;
+    document.getElementById("book_apm").style.display="block"
   } else {
     document.getElementById("disk").innerHTML = "";
+    document.getElementById("book_apm").style.display="";
   }
+
 
   // ${} etla mate km treament name and costing and
   //  seating change karti vakhte name cost and seat
@@ -58,38 +61,98 @@ function handleChange() {
   // one line bov badhi line ma `` sale chhe
 
   // '' , "" table ma use na thai
+
+  // __________ 
+// document.getElementById("book_apm").style.display="block";
+
+// starting ma table nai show karva nu hovathi display none 
+// after bock click pr  
+
+
 }
 
-function handleDateSubmit() {
+// function handleDateSubmit() {
+//   event.preventDefault();
+
+//   let apdate = document.getElementById("selectdate").value;
+
+//   if (apdate !== "") {
+//     let newdate = new Date();
+//     // console.log(newdate);
+
+//     let print1 = `
+//         <table>
+//             <tr>
+//                 <th>Treatment Name</th>
+//                 <th>Appointment Date</th>
+//                 <th>Costing</th>
+//             </tr>
+    
+//     `;
+
+//     let amount = costing / seating;
+//     print1 += `<tr>
+//                     <td>${treatmentname}</td>
+//                     <td>${newdate.toDateString}</td>
+//                     <td>${amount}</td>
+//                 </tr>`;
+
+//     document.getElementById("disk1").innerHTML = "";
+//     document.getElementById("datearr").innerHTML = print1;
+
+//     document.getElementById("datearr").innerHTML = print1;
+//   } else {
+//     document.getElementById("datearr").innerHTML =
+//       "please select your dental appointment";
+//   }
+// }
+
+//class := seating hoi etli var loop fare 
+
+
+function handlleSubmit(){
+
   event.preventDefault();
 
-  let apdate = document.getElementById("selectdate").value;
+  // console.log(treatmentname,seating,costing);
 
-  if (apdate !== "") {
-    let newdate = new Date();
-    // console.log(newdate);
+  const dateselect=document.getElementById("dateselect").value;
 
-    let print1 = `
-        <table>
+  let d=new Date(dateselect);
+
+  // console.log(dateselect);
+
+  let print1 = `
+     <table border>
             <tr>
                 <th>Treatment Name</th>
                 <th>Appointment Date</th>
                 <th>Costing</th>
             </tr>
+  `
+
+  for (i=0; i< seating; i++) {
     
-    `;
 
-    let amount = costing / seating;
-    print1 += `<tr>
-                    <td>${treatmentname}</td>
-                    <td>${newdate.toDateString}</td>
-                    <td>${amount}</td>
-                </tr>`;
+    print1 += `
+            <tr>
+                <td>${treatmentname}</td>
+                <td>${d.toLocaleDateString()}</td>
+                <td>${costing / seating}</td>
+            </tr>
+   `
+  //  console.log(treatmentname,seating,costing);
 
-    document.getElementById("disk1").innerHTML = "";
-    document.getElementById("datearr").innerHTML = "print1";
-  } else {
-    document.getElementById("datearr").innerHTML =
-      "please select your dental appointment";
+  console.log(print1);
+
+  d.setDate(d.getDate()+7)
+  
   }
+
+  print1 += `</table>`;
+
+  document.getElementById("disk1").innerHTML=print1;
+  
+  
+
 }

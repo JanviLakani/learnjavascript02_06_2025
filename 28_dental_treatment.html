@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        #book_apm{
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -29,10 +35,22 @@
 
     </div> <br>
 
-    <form action="" name="appodate" id="appointdate" onsubmit="handleDateSubmit()">
+    <!-- <form action="" name="appodate" id="appointdate" onsubmit="handleDateSubmit()">
         <input type="date" id="selectdate">
         <input type="submit">
-    </form>
+    </form> -->
+
+    <div>
+        
+        <form action="" name="book_apm" id="book_apm"  onsubmit="handlleSubmit()">
+
+            <label for="dateselect">Book Your Appointment</label><br>
+            <input type="date" id="dateselect" name="dateselect">
+            <input type="submit">
+
+
+        </form>
+    </div>
 
     <span id="datearr"></span>
 
