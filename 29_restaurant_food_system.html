@@ -5,10 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .color{
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    
+    <form action=""  onsubmit="handleSubmit()">
+        <select name="food_type" id="food_type">
+            <option value="0">--Select Food--</option>
+            <option value="800">Pizza</option>
+            <option value="200">Burger</option>
+            <option value="1000">Combo</option>
+        </select>
 
-    <script src=""></script>
+        
+        <span id="fooderr" class="color"></span> 
+
+        <select name="food_quantity" id="food_quantity">
+            <option value="0">--Select Food Quantity</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        
+        <span id="fooderr"></span> <br>
+        
+        <br><br>
+
+        <select name="select_fries" id="select_fries">
+            <option value="0">--Select Food Quantity</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <select name="select_fries_quantity" id="select_fries_quantity">
+            <option value="0">--Select Fries Quantity</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        
+        <span id="frieserr" class="color"></span>
+
+        <br><br>
+
+        <select name="select_cold_drink" id="select_cold_drink">
+            <option value="0">--Select Cold Drink--</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <select name="select_cold_drink_quantity" id="select_cold_drink_quantity">
+            <option value="0">--Select Cold Drink Quantity</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <select name="cold_drink_type" id="cold_drink_type">
+            <option value="0">--Select Cold Drink--</option>
+            <option value="100">Mazza</option>
+            <option value="120">Pepsi</option>
+            <option value="150">Fanta</option>
+
+        </select>
+
+        <span id="cold_dribk_err"></span>
+
+        
+        <br><br>
+         <input type="submit">
+    </form>
+
+   
+    <script src="js/29_restaurant_food_system.js"></script>
 </body>
 </html>
