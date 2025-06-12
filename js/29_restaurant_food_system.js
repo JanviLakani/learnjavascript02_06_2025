@@ -5,19 +5,19 @@ function handleSubmit(){
     
     event.preventDefault();
 
-    const food_type=document.getElementById("food_type").value;
-    const food_quantity=document.getElementById("food_quantity").value;
+    const food_type=parseInt(document.getElementById("food_type").value);
+    const food_quantity=parseInt(document.getElementById("food_quantity").value);
     const select_fries=document.getElementById("select_fries").value;
-    const select_fries_quantity=document.getElementById("select_fries_quantity").value;
+    const select_fries_quantity=parseInt(document.getElementById("select_fries_quantity").value);
     const select_cold_drink=document.getElementById("select_cold_drink").value;
-    const select_cold_drink_quantity=document.getElementById("select_cold_drink_quantity").value;
-    const cold_drink_type=document.getElementById("cold_drink_type").value;
+    const select_cold_drink_quantity=parseInt(document.getElementById("select_cold_drink_quantity").value);
+    const cold_drink_type=parseInt(document.getElementById("cold_drink_type").value);
     
 
 
-    console.log(food_type,food_quantity,select_fries, select_fries_quantity, select_cold_drink ,
-        select_cold_drink_quantity,cold_drink_type
-     );
+    // console.log(food_type,food_quantity,select_fries, select_fries_quantity, select_cold_drink ,
+    //     select_cold_drink_quantity,cold_drink_type
+    //  );
     
 
      if((food_type == 0 && food_quantity == 0) ||
@@ -47,6 +47,46 @@ function handleSubmit(){
         document.getElementById("cold_dribk_err").innerHTML='please select your drink';
     }
 
+    let food_name;
+
+    if(food_type == 800) {
+        food_name='Pizza'
+    } else if(food_type == 200) {
+        food_name='Burger'
+    } else if(food_type = 1000) {
+        food_name='Combo'
+    }
+
+    let drink_name;
+
+    if (cold_drink_type == 100) {
+        drink_name='Mazza';
+    } else if(cold_drink_type == 120) {
+        drink_name='Pepsi';
+    } else if(cold_drink_type == 150) {
+        drink_name='fanta';
+    }
     
+
+    // let print = "" ;
+    
+    // print = `
+    //     <table>
+    //         <tr>
+    //             <th>Food Items</th>
+    //             <th>Type</th>
+    //             <th>Quantity</th>
+    //             <th>Total Price</th>
+    //         </tr>
+    // `
+    // print += `
+    //      <tr>
+    //             <th>Food Items</th>
+    //             <th>Type</th>
+    //             <th>Quantity</th>
+    //             <th>Total Price</th>
+    //     </tr>
+    // `
+
 
 }
