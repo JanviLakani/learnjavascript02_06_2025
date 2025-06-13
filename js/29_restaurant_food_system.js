@@ -1,3 +1,4 @@
+ let total = 0;
 
 function handleSubmit(){
 
@@ -19,6 +20,7 @@ function handleSubmit(){
     //     select_cold_drink_quantity,cold_drink_type
     //  );
     
+    let foodtbl =false;
 
      if((food_type == 0 && food_quantity == 0) ||
         (food_type > 0 && food_quantity > 0)
@@ -27,66 +29,174 @@ function handleSubmit(){
         document.getElementById("fooderr").innerHTML='';
      } else {
         document.getElementById("fooderr").innerHTML='Select Food Type';
+        foodtbl=true;
      }
 
      if ((select_fries == 0 && select_fries_quantity == 0) || 
-        (select_fries == 'yes' && select_fries_quantity > 0) ||
+        (select_fries > 0 && select_fries_quantity > 0) ||
         (select_fries == 'no' && select_fries_quantity == 0) 
     ) {
         document.getElementById("frieserr").innerHTML="";
     } else {
         document.getElementById("frieserr").innerHTML="select fries";
+         foodtbl=true;
     }
 
-      if ((select_cold_drink == 0 && select_cold_drink_quantity== 0 && cold_drink_type) ||
+      if ((select_cold_drink == 0 && select_cold_drink_quantity== 0 && cold_drink_type == 0) ||
       (select_cold_drink == 'yes' && select_cold_drink_quantity > 0 && cold_drink_type > 0) || 
-      (select_cold_drink == "no" && cold_drink_type == 0 ) 
+      (select_cold_drink == "no" && select_cold_drink_quantity == 0 && cold_drink_type == 0 ) 
     ) {
         document.getElementById("cold_dribk_err").innerHTML='';
     } else {
         document.getElementById("cold_dribk_err").innerHTML='please select your drink';
+         foodtbl=true;
     }
 
-    let food_name;
+      let print = '';
+      
+       
 
-    if(food_type == 800) {
-        food_name='Pizza'
-    } else if(food_type == 200) {
-        food_name='Burger'
-    } else if(food_type = 1000) {
-        food_name='Combo'
-    }
+    if (! foodtbl) {
+        console.log("tab print");
 
-    let drink_name;
+        if ((food_type > 0 && food_quantity > 0) || (select_fries > 0  && select_fries_quantity > 0)
+        || (select_cold_drink == "yes" && select_cold_drink_quantity > 0 && cold_drink_type > 0)) {
+            print = `
+                 <table border>
+            <tr>
+                <th>Food Items</th>
+                <th>Type</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+            </tr>
+             `
 
-    if (cold_drink_type == 100) {
-        drink_name='Mazza';
-    } else if(cold_drink_type == 120) {
-        drink_name='Pepsi';
-    } else if(cold_drink_type == 150) {
-        drink_name='fanta';
-    }
+        document.getElementById("cou_show").style.display="block"
+        
     
-
-    // let print = "" ;
     
-    // print = `
-    //     <table>
-    //         <tr>
-    //             <th>Food Items</th>
-    //             <th>Type</th>
-    //             <th>Quantity</th>
-    //             <th>Total Price</th>
-    //         </tr>
-    // `
-    // print += `
-    //      <tr>
-    //             <th>Food Items</th>
-    //             <th>Type</th>
-    //             <th>Quantity</th>
-    //             <th>Total Price</th>
-    //     </tr>
-    // `
+        }
+
+       
+        
+        if (food_type > 0 && food_quantity > 0) {
+
+        let foodname;
+
+        if(food_type == 800) {
+           foodname="Pizza" 
+        } else if(food_type == 200) {
+            foodname="Burger" 
+        } else if (food_type == 1000) {
+            foodname="Combo" 
+        }
+
+            // print = `
+            //      <table border>
+            // <tr>
+            //     <th>Food Items</th>
+            //     <th>Type</th>
+            //     <th>Quantity</th>
+            //     <th>Total Price</th>
+            // </tr>
+            //  `
+
+            // aa table ne if condition ma rakhel chhe km 
+            // k use jo only drink j select kare to pn table shoe thai 
+
+             print += `
+               <tr>
+                <td>Food Items</td>
+                <td>${foodname}</td>
+                <td>${food_quantity}</td>
+                <td>${food_quantity * food_type}</td>
+            </tr>
+            `
+            //  total +=;
+
+        } 
+
+        if (select_fries > 0  && select_fries_quantity > 0) {
+
+              print += `
+               <tr>
+                <td>Food Items</td>
+                <td>fries</td>
+                <td>${select_fries_quantity}</td>
+                <td>${select_fries_quantity * select_fries }</td>
+            </tr>
+              `
+
+            
+              
+        }
+
+        if(select_cold_drink == "yes" && select_cold_drink_quantity > 0 && cold_drink_type > 0 ) {
+
+            let cold_drink_name = '';
+
+            if(cold_drink_type == 100) {
+                cold_drink_name='Mazza'
+            } else if(cold_drink_type == 120) {
+                cold_drink_name='Pepsi'
+            } else if(cold_drink_type == 150) {
+                cold_drink_name='Fanta'
+            }
+
+               print += `
+               <tr>
+                <td>cold drink</td>
+                <td>${cold_drink_name}</td>
+                <td>${select_cold_drink_quantity}</td>
+                <td>${select_cold_drink_quantity * cold_drink_type }</td>
+            </tr>`
+             
+        }
+
+        print += `</table>`
+        
+        document.getElementById("disk").innerHTML=print;
+
+
+     
+        
+
+
+
+
+    } else {
+        console.log("tab not");
+        
+    }
+
 
 
 }
+
+
+// function handleCoupan(){
+
+//     let usercoupan=document.getElementById("coupan").value;
+
+//     console.log(usercoupan);
+
+//     // if( usercoupan ==  ) {
+
+//     // }
+
+//     if () {
+//         dis="abc3"
+
+//     }
+
+//     let biil=(total-dis)
+
+//     <h2>your discount${dis}</h2>
+//     <h1>total bill${biil}</h1>
+
+
+    // document.getElementById("bill").innerHTML=bill
+
+    // print karava mete id get karavi show karva  
+
+// }

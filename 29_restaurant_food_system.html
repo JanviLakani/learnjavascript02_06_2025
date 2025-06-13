@@ -9,6 +9,10 @@
         .color{
             color: red;
         }
+
+        #cou_show{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -32,11 +36,11 @@
         
         <span id="fooderr"></span> <br>
         
-        <br><br>
+        <br>
 
         <select name="select_fries" id="select_fries">
             <option value="0">--Select Food Quantity</option>
-            <option value="yes">Yes</option>
+            <option value="150">Yes</option>
             <option value="no">No</option>
         </select>
 
@@ -78,14 +82,96 @@
         <br><br>
          <input type="submit">
     </form>
+    <br><br>
 
     <div id="disk">
         
-        </table>
+        <!-- </table> -->
+        
+    </div>
 
+    <form action="" id="cou_show" onsubmit="handleCoupan()" >
+        <input type="text" id="coupan"  placeholder="add coupan id">
+
+        <input type="submit">
+    </form>
+
+    <div id="bill">
 
     </div>
    
     <script src="js/29_restaurant_food_system.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    let food_name;
+
+    if(food_type == 800) {
+        food_name='Pizza'
+    } else if(food_type == 200) {
+        food_name='Burger'
+    } else if(food_type = 1000) {
+        food_name='Combo'
+    }
+
+    let drink_name;
+
+    if (cold_drink_type == 100) {
+        drink_name='Mazza';
+    } else if(cold_drink_type == 120) {
+        drink_name='Pepsi';
+    } else if(cold_drink_type == 150) {
+        drink_name='fanta';
+    }
+    
+
+    let print = "" ;
+    
+    print = `
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Type</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+            </tr>
+    `
+    print += `
+         <tr>
+                <th>Food Items</th>
+                <th>Type</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+        </tr>
+    ` -->
