@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .errcolor{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="pcsystem" onsubmit="handleSubmit()">
+        <h2>processor system</h2>
+
+        Processor :- 
+        <input type="radio" id="i3" value="10000" name="processor">
+        <label for="">i3</label>
+
+        <input type="radio" id="i5" value="15000" name="processor">
+        <label for="">i5</label>
+
+        <input type="radio" id="i7" value="20000" name="processor">
+        <label for="">i7</label>
+
+        <span id="processorerr" class="errcolor"></span>
+
+        <br>
+
+        RAM :-
+        <input type="radio" id="4gb" value="1500" name="ram">
+        <label for="">4GB</label>
+
+
+        <input type="radio" id="8gb" value="2000" name="ram">
+        <label for="">8GB</label>
+
+
+        <input type="radio" id="12gb" value="3000" name="ram">
+        <label for="">12GB</label>
+
+        <span id="ramerr" class="errcolor"></span>
+
+        <br>
+
+        Memory :- 
+        <input type="radio" id="256gb" value="5000" name="memory">
+        <label for="">256GB</label>
+
+        <input type="radio" id="512gb" value="10000" name="memory">
+        <label for="">512GB</label>
+
+        <input type="radio" id="1tb" value="20000" name="memory">
+        <label for="">1TB</label>
+
+        <span id="memoryerr" class="errcolor"></span>
+
+        <br>
+
+        Graphics Card :- 
+        <input type="radio" id="Graphicsc_yes" value="18000" name="Graphicscard">
+        <label for="">Yes</label>
+
+        <input type="radio" id="Graphics_no" value="10" name="Graphicscard">
+        <label for="">No</label>
+
+
+        <span id="Graphicserr" class="errcolor"></span>
+
+        <br><br>
+
+        <input type="submit">
+
+    </form>
+    
+    <script src="js/31_pc_processor_system.js"></script>
+</body>
+</html>
