@@ -7,13 +7,13 @@ function handleSubmit(){
     const memory=document.getElementsByName("memory");
     const Graphicscard=document.getElementsByName("Graphicscard");
 
-    console.log(processor ,ram ,memory ,Graphicscard);
+    // console.log(processor ,ram ,memory ,Graphicscard);
 
     let errbox=false;
 
     // 1 processor 
 
-    let processorvalue=0;
+    let processorvalue='';
 
     for(i=0; i<processor.length; i++) {
         if(processor[i].checked)
@@ -21,7 +21,7 @@ function handleSubmit(){
         console.log(processorvalue);  
     }
 
-    if(processorvalue == '') {
+    if(processorvalue === '') {
         document.getElementById("processorerr").innerHTML='select your processor';
         errbox=true;
     } else {
@@ -31,7 +31,7 @@ function handleSubmit(){
 
     // 2 ram
 
-    let ramvalue=0;
+    let ramvalue='';
 
     for(let i=0; i<ram.length; i++) {
         if(ram[i].checked)
@@ -40,7 +40,7 @@ function handleSubmit(){
     
     }
 
-    if(ramvalue == '') {
+    if(ramvalue === '') {
          document.getElementById("ramerr").innerHTML='select your processor ram ';
           errbox=true;
     } else {
@@ -50,15 +50,15 @@ function handleSubmit(){
 
     // 3 memory 
 
-    let memoryvalue=0;
+    let memoryvalue='';
 
     for(i=0; i<memory.length; i++) {
         if(memory[i].checked)
         memoryvalue=parseInt(memory[i].value)
     }
 
-    if(memoryvalue == '') {
-         document.getElementById("memoryerr").innerHTML='select your processor ram ';
+    if(memoryvalue === '') {
+         document.getElementById("memoryerr").innerHTML='select your processor memory';
           errbox=true;
     } else {
          document.getElementById("memoryerr").innerHTML='';
@@ -68,18 +68,17 @@ function handleSubmit(){
     // 4 graphics card 
 
 
-    let graphicscardvalue=0;
+    let graphicscardvalue='';
 
     for(i=0; i<Graphicscard.length; i++) {
         if(Graphicscard[i].checked)
             graphicscardvalue=parseInt(Graphicscard[i].value)
-        console.log("hello",graphicscardvalue);
         
     }
 
 
-    if(graphicscardvalue == '') {
-        document.getElementById("Graphicserr").innerHTML='do want to add graphics card ';
+    if(graphicscardvalue === '') {
+        document.getElementById("Graphicserr").innerHTML='do you want to add graphics card ';
          errbox=true;
     } else {
          document.getElementById("Graphicserr").innerHTML='';
@@ -87,14 +86,33 @@ function handleSubmit(){
 
     if(!errbox) {
         console.log("table print");
+        let pcname='';
 
         
-    let ramvalue=0;
-        if(processorvalue <= 10000 && ramvalue <= 1500  && memoryvalue <= 5000 && graphicscardvalue <=  0)  {
+        if(processorvalue <= 10000) {
+            pcname='student pc'
+        } else if(processorvalue <= 15000 ) {
+            if(ramvalue >=2000) {
+                pcname='professional pc'
+            } else {
+                pcname='student pc'
+            }
 
-        } else {
+        } else if(processorvalue <=20000) {
+            if(ramvalue >= 3000 && memoryvalue >= 10000 && graphicscardvalue >=18000) {
+                pcname='gaming pc'
+            } else {
+                pcname='professional pc'
+            }
 
         }
+
+
+        let total=processorvalue + ramvalue + memoryvalue + graphicscardvalue;
+
+        document.getElementById("total_price").innerHTML=total;
+
+        document.getElementById("pc_type_name").innerHTML=pcname;
 
 
 
