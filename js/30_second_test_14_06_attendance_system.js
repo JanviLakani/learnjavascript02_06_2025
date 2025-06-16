@@ -6,7 +6,7 @@ function handleSubmit() {
 
   studentatt = parseInt(document.getElementById("student").value);
 
-  console.log(studentatt);
+  // console.log(studentatt);
 
   document.getElementById("showstudent").innerHTML = studentatt;
 //   studentatt = student;
@@ -16,7 +16,7 @@ function handleSubmit() {
   for (let i = 1; i <= studentatt; i++) {
     const element = `
     <span>${i}</span> 
-    <input type="text" name="${pre}${i}" id="${pre}${i}" placeholder="enter number ${i}">
+    <input type="text"  id="${pre}${i}" placeholder="enter number ${i}">
 
     <br><br>
 `;
