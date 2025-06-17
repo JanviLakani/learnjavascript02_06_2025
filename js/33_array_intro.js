@@ -269,11 +269,6 @@
 
 
 
-
-
-
-
-
 // _______________________________________________________________________________ 
 
 // indexof 
@@ -339,13 +334,6 @@
 
 
 
-
-
-
-
-
-
-
 // ____________________________________________________________________ 
 
 // includes
@@ -355,17 +343,6 @@
 // const ans=arr.includes(30);
 
 // console.log(ans); // ans truw
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -383,18 +360,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // ____________________________________________________________________ 
 
 // fill 
@@ -404,9 +369,6 @@
 // const ans=arr.fill(99);
 
 // console.log(ans); // return array with filled all element 
-
-
-
 
 
 
@@ -436,21 +398,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ____________________________________________________________________ 
 
 // reverse 
@@ -466,6 +413,100 @@
 
 
 
+// class 
+
+
+// slice  return part of array 
+
+// const arr=[12,45,67,89,90,56,76]
+
+// const ans=arr.slice(2 ,5);
+
+// console.log(ans);   // ans[67, 89, 90]
+
+
+// map iteration return array 
+
+
+// const arr=[12,45,67,89,90,56,76]
+
+// const ans=arr.map((v,i) => v+ 10);
+
+// console.log(ans);  // ans 22, 55, 77, 99, 100, 66, 86]
+
+
+// const arr=[12,45,67,89,90,56,76]
+
+// const ans=arr.map((v,i) => {
+//     if(v>50) {
+//         return 1
+//     } else if(v<50) {
+//         return 0;
+//     } else {
+//         return 'x'
+//     }
+// })
+
+// filter :- fitering element base on condition 
+// return array 
+
+
+// const arr=[12,45,67,89,90,56,76]
+
+// const ans=arr.filter((v,i) => v>50)
+
+// console.log(ans);  // [67, 89, 90, 56, 76]
+
+
+
+// const arr=[12,45,67,89,90,56,76]
+// const ans=arr.map((v,i) => {
+//     if(v>50) {
+//         return v;
+//     }
+// })
+
+// console.log(ans); 
+
+// not worl in this so use filter method so 
+// first check when use right method so 
+// this is based on condition 
+
+//  [undefined, undefined, 67, 89, 90, 56, 76]
+
+
+// reduce 
+
+// most inportent method many work 0,[],{} in reduce 
+
+
+// function excecute , return accumated value 
+// orignal array not change 
+
+// most inportent 3 perameter in this method  (accmated , value , index)
+
+// const arr=[12,45,67,89,90,56,76]
+
+// const ans=arr.reduce((acc,v,i)=> acc+v , 0)
+
+// console.log(ans);  // ans 435
+
+
+// indexof  return index of first occurance  of element 
+
+// const arr=[12,45,67,89,90,56,76]
+
+// const ans=arr.indexOf(50);  // e element tya nathi to ans ma -1 aavshe 
+
+// const ans=arr.indexOf(45);  // ans 1 (index)
+
+// console.log(ans);
+
+
+
+// lastindexof :- return index of last occurance  of element  
+ 
+const arr=[12,45,67,89,90,56,76] 
 
 
 
@@ -475,9 +516,3 @@
 
 
 
-
-
-
-
-
-// ________________________________________________________________
