@@ -512,6 +512,19 @@ const arr=[12,45,67,89,90,56,76]
 
 
 
+// git config user.name
+// git config user.email
+
+
+
+// $ git config --global user.name
+// JanviLakani
+
+// $ git config --global user.email
+// lakanijanvi1999@gmail.com
+
+// git config --global user.name "Your Name"
+// git config --global user.email "your.email@example.com"
 
 
 
