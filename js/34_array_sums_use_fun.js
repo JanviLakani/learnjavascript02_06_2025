@@ -563,3 +563,12 @@
 // const ans=arr.sort((a,b)=> b-a).slice(0,3).reduce((acc,v,i) => acc+v , 0) 
 
 // console.log(ans);
+
+
+//  24.    Finding the first three maximum number's sum an array. 
+
+// const arr=[50,100,150,200,250,150,300]; // [300, 250, 200, 150, 150, 100, 50]
+
+// const ans=arr.sort((a,b)=> b-a).slice(0,3).reduce((acc,v,i) => acc+v , 0) 
+
+// console.log(ans);
