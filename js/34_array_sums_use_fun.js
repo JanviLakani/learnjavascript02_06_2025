@@ -398,20 +398,66 @@
 // console.log(secondlarge);
 
 
+// class  13 
+
+
+
+//  const arr=[10,50,99,10,87,58,42,38,98 ,10];
+
+//  let unicnum=[];
+
+//  arr.map((v,i) =>{
+//     if(!unicnum.includes(v)) {
+//         unicnum.push(v);
+//     }
+//  });
+
+//  console.log(arr,unicnum); 
+
+//  let x = unicnum;
+
+//  console.log("x",x);
+ 
+
+//  x=arr.sort((a,b)=> b-a);
+
+//  console.log(x);
+ 
+//  k=2;  //(user pase thi j mle tene k dgarel chhe )
+
+//  console.log(arr,arr[k-1]);
+ 
+
+
 
 // ___________________________________________________________________ 14
 // 14.    Finding the k-th smallest element in an array. 
 
 // let arr=[5,10,45,20,30,25,35,40,15,50]; // [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
 
-// let ans=arr.sort((a,b) => a-b );
+//  let unicnum=[];
 
-// console.log(ans);
+//  arr.map((v,i) =>{
+//     if(!unicnum.includes(v)) {  // first check in box to available elemnet in boc so find 
+//         unicnum.push(v);   
+//     }
+//  });
+
+//  console.log(arr,unicnum); 
+
+//  let x = unicnum;
+
+//  console.log("x",x);
+
+// x=arr.sort((a,b) => a-b );
 
 
-// let k=3; //  3rd smallest element
+// console.log(x);
 
-// console.log(arr[k - 1]);
+
+// let k=3; 
+
+// console.log(arr[k - 1]);   // -1 etala mate km k index 0 thi start thati hovathi //  3rd smallest element
 // ___________________________________________________________________ 15
 
 // 15.    Finding the median of an array. 
@@ -450,6 +496,35 @@
 
 
 
+
+ // class 15
+
+// let arr=[2,6,5,1]; // 1,2,3,4,5,6
+
+// // let arr[23,45,67,78,90]
+
+// let ans=arr.sort((a,b) => a - b);
+
+// const ans1 = Math.floor(arr.length / 2);
+
+// console.log(ans1);
+
+
+// if (arr.length % 2 === 0) {
+//   let x=(ans[ans1] + ans[ans1-1]) /2;  // ek index back ni need hovathi -1 
+
+//   console.log(x);
+  
+// } else {
+//   console.log(ans[ans1]);
+  
+// }
+
+
+// ex:-  tarike arr[10,20,30,40] hoi yo array length first ek index mli jai after
+// eni bajuni joti hoi to emno j element temna -1 karva no 
+
+
 // ___________________________________________ 16 
 
 // 16.    Checking if two arrays are equal or not. 
@@ -462,7 +537,55 @@
 
 // let ans = arr.length === arr1.length && arr.every((value,index) => value === arr1[index])
 
-// console.log(ans);
+// console.log(ans);  // aama every function ma length check karva ni need nathi km e 
+// index and value banne j check kari ne  aape toj true return kare chhe nai to false 
+
+
+// class 16 
+
+// without use array method if and for loop help to check both array length and index 
+
+//  let arr=[10,20,30];
+
+// let arr1=[10,20,30,60];
+
+// let flag = true;
+
+// if (arr.length === arr1.length) {
+//   // console.log("same");  (below comment read)
+//   // // aa start nai rakhvanu km k hju pn if condition hovathi e 
+//   // direct same kai deshe to comment rakhvo logonly check karva use karvu 
+//   for(i=0; i<=arr.length; i++) {
+//     if(arr[i] !== arr1[i]) {
+//       flag=false;
+//       break; 
+//     } 
+//   }
+
+//   if(flag) {
+//     console.log(" both array element are same");
+    
+//   } else {
+//     console.log("not same array element");
+    
+//   }
+  
+// } else {
+//   console.log("not same length");
+  
+// }
+
+// with use function to check 2 array length and index sort tric  class 16 
+
+//  let arr=[10,20,30];
+
+// let arr1=[10,20,30];
+
+// let ans=arr.every((v,i) => v === arr1[i]);
+
+// console.log("check",ans);
+
+
 
 // ___________________________________________ 17
 
@@ -498,7 +621,7 @@
 
 //  const arr=[10,20,30,40,10,50,60,10];
 
-//  const ans=arr.map((v,i) => v === 10 ? 999 : v);
+//  const ans=arr.map((v,i) => v === 10 ? 999 : v);  // v === 10 hase to 999 karshe nai to pachhu e value j majshe 
 
 //  console.log(ans);
 
@@ -508,7 +631,7 @@
 
 // const arr=[10,20,30,40,50,60,70,80,90,100]; 
 
-// const ans=arr.slice().reverse();
+// const ans=arr.slice().reverse();  // slice ek emty array aape chhe pche tena pr reverse  nu kam karavu 
 
 // console.log(arr,ans);
 
