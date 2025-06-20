@@ -639,7 +639,7 @@
 
 //  22.    Checking if an array is sorted in ascending order.
 
-//  const arr=[10,50,87,2,3,64,51,21];
+//  const arr=[10,50,87,2,3,64,51,21]; 
 
 //  const ans=arr.slice().sort((a,b) => a-b);
 
@@ -653,6 +653,29 @@
 //     console.log("no ,number is not ascending order.");
     
 //  }
+
+// class 
+
+//  const arr=[10,50,87,2,3,64,51,21];
+
+// // const arr=[2,3,5];
+
+//   // const ans=arr.slice().sort((a,b) => a-b);
+
+//   // console.log(ans);
+
+//   function checkarr(arr) {
+//     for(let i=0; i<=arr.length; i++) {
+//       if(arr[i] > arr[i+1])
+//         return false
+//     }
+//     return true;
+//   }
+
+//   console.log(checkarr(arr));
+  
+  
+ 
 
   // ___________________________________________ 23
 
@@ -672,9 +695,27 @@
 //   }
 
 //   console.log(ans);
+
+
+// class 
+
+//  const arr=[10,50,87,2,3,64,51,21];  // false
+
+// const arr=[30,20,10]  // true
+
+
+//   function checkarr(arr) {
+//     for(let i=0; i<=arr.length; i++) {
+//       if(arr[i] < arr[i+1])
+//         return false
+//     }
+//     return true;
+//   }
+
+//   console.log(checkarr(arr));
   
 
-
+// x.redu((v,acc)v.len acc.la v acc)
 
 
  
@@ -686,6 +727,101 @@
 // const ans=arr.sort((a,b)=> b-a).slice(0,3).reduce((acc,v,i) => acc+v , 0) 
 
 // console.log(ans);
+
+
+// des temp ec 
+// emty arr loop 0 to 2  Push 
+// for sum =sum+[arr[i ]]
+
+
+// const arr=[3,2,50,10,5];
+
+// for(let i=0; i<arr.length; i++) {
+//     for(let j=i+1; j<arr.length; j++ ) {
+//         if(arr[i] > arr[j]) {
+//             let temp;
+//             temp=arr[i];
+//             arr[i]=arr[j];
+//             arr[j]=temp;
+//         }
+
+        
+//     }
+// }
+
+// console.log(arr);
+
+// let sum=0;
+
+// for(let i=0; i<=2; i++) {
+//   sum=sum+arr[i]
+// }
+
+// console.log(sum);
+
+// work 
+
+// filter flag 
+// filter reduce
+// _____________________________________________________________ 
+
+// const arr=[10,20,30,40,50];
+
+// const arr1=[50,60,70,80,90];
+
+
+// const ans=arr.filter((v,i) => v = arr1.includes(v))
+
+// console.log(ans)
+
+// ________________________________________________ 
+
+
+// const arr=[10,20,30,40,50]; 
+
+// const ans=arr.join('').split("").reduce((acc,v,i) => acc + parseFloat(v),0)
+
+// console.log(ans);
+
+
+
+// _______________________________________________
+
+// const arr=["hi","hey","hello" ,"please"];
+
+// const ans=arr.reduce((acc,v) => acc.length > v.length ? acc:v);
+
+// console.log(ans);
+
+// ________________________________________________________ 
+
+// 28
+
+// const arr=[10,2 , [20 ,[28] ,10, ],48, 45]
+
+// const ans=arr.flat(2);
+
+// console.log(ans); // ans :- [10, 2, 20, 28, 10, 48, 45]
+
+
+// 29 
+
+// const arr1=[[12,30],[2,4] ,[10,7]];
+
+// // const ans=arr1.filter((v,i) => v.reduce((acc,v1) => acc+v1) ,0)
+// const ans=arr1.filter((v,i) => v.reduce((acc,v1) => acc+v1,0))
+
+// console.log(ans);
+
+// 30  
+
+// const arr2=[10,20,3,30,5,7,30];
+
+// const ans1=arr2.filter((v,i) => arr2.indexOf(v) == arr2.lastIndexOf(v));
+
+// console.log(ans1);  // [10, 20, 3, 5, 7]
+
+
 
 
 

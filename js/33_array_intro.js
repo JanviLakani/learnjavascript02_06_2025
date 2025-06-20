@@ -506,7 +506,7 @@
 
 // lastindexof :- return index of last occurance  of element  
  
-const arr=[12,45,67,89,90,56,76] 
+// const arr=[12,45,67,89,90,56,76] 
 
 
 
