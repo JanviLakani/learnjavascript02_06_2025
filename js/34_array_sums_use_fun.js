@@ -842,6 +842,12 @@ console.log("learn javascript");
 console.log("hello");
 console.log("hello");console.log("hello");console.log("hello");
 
+console.log("yes");
+console.log("yes");
+console.log("yes");
+console.log("yes");
+
+
 
 
 
