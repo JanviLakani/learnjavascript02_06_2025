@@ -831,6 +831,16 @@ console.log("hello java script");
 console.log("hello java script");
 
 
+console.log("learn javascript");
+console.log("learn javascript");
+console.log("learn javascript");
+console.log("learn javascript");
+console.log("learn javascript");
+console.log("learn javascript");
+
+
+
+
 
 
 
