@@ -1184,5 +1184,33 @@ console.log("hello java script");
 
 // console.log(double);  // ans [4, 8, 12, 16, 20, 24, 28, 32]
 
-// 28 
+// 28  Convert Array to a Single String
+
+// const arr = ["I", "you", "JS" ,"me","your"];
+
+// const ans=arr.reduce((acc,v,i) => acc + " " + v);
+
+// console.log(ans);  // ans I you JS me your
+
+// 29 Q: Check if the array contains any negative number
+// 
+// const arr = [10, 20, -5, 30];
+
+// const ans=arr.some((v,i) => v < 0) 
+
+// console.log(ans);   // ans true
+
+
+
+// 30 Mask Phone Numbers
+// Given an array of phone numbers (as strings), return a new array where all digits except the last 4 are replaced with *.
+
+// const arr = ["9876543210", "9123456789", "9988776655"];
+
+// const ans=arr.map((v) => "*".repeat(v.length-4) + v.slice(-4));
+
+// console.log(ans);  //  ['******3210', '******6789', '******6655']
+
+
+
 
