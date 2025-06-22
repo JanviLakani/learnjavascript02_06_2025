@@ -826,32 +826,363 @@
 // console.log("hello git");
 console.log("hello java script");
 
-console.log("hello java script");
-console.log("hello java script");
-console.log("hello java script");
+// console.log("hello java script");
+// console.log("hello java script");
+// console.log("hello java script");
 
 
-console.log("learn javascript");
-console.log("learn javascript");
-console.log("learn javascript");
-console.log("learn javascript");
-console.log("learn javascript");
-console.log("learn javascript");
+// console.log("learn javascript");
+// console.log("learn javascript");
+// console.log("learn javascript");
+// console.log("learn javascript");
+// console.log("learn javascript");
+// console.log("learn javascript");
 
 
-console.log("hello");
-console.log("hello");console.log("hello");console.log("hello");
+// console.log("hello");
+// console.log("hello");console.log("hello");console.log("hello");
 
-console.log("yes");
-console.log("yes");
-console.log("yes");
-console.log("yes");
-
-
+// console.log("yes");
+// console.log("yes");
+// console.log("yes");
+// console.log("yes");
 
 
+// 1 Square Only Even Numbers in an Array 
+
+// const arr=[5,10,15,20,25,30,35,40,45,50] 
+
+// const ans=arr.filter((v,i) => v % 2 === 0)
+//               .map((v) => v * v)
+
+// console.log(ans);
 
 
 
+// 2. Filter Students Who Passed 
 
+
+// const students = [
+//   { name: "A", marks: 80 },
+//   { name: "B", marks: 40 },
+//   { name: "C", marks: 90 }
+// ];
+
+// const ans=students.filter((v)=> v.marks >= 50)
+
+// ans.forEach((v) => {
+//   console.log(v.name, v.marks);
+// });
+
+// 3. Convert Array of Strings to Uppercase 
+
+
+// const arr=["manvi","sanvi","mansi","trushali"];
+
+// const ans=arr.map((v)=> v.toUpperCase());
+
+// console.log(ans);   // ['MANVI', 'SANVI', 'MANSI', 'TRUSHALI'] 
+
+
+// 4 Find the Length of the Longest Word 
+
+// const arr= ["janvi", "javascript", "hi", "apple"]
+
+// const ans=arr.map((v) => v.length)  // [5, 10, 2, 5]
+
+// const maxlength=Math.max(...ans)
+
+// console.log(maxlength);
+
+// 5   Check if Every Number is Even 
+
+//  const arr=[10,20,3,30,5,7,30];
+
+
+
+//  for(let i=0; i<arr.length; i++) {
+
+//   if (arr[i]  % 2 === 0) {
+//   console.log(arr[i],"yes , array are even");
+  
+//  } else {
+//   console.log(arr[i],"no , array not same");
+  
+//  }
+
+//  }
+
+//  6 Check If All Elements Are Positive 
+
+
+
+//  const arr=[10,20,3,30,5,7,30]
+
+//  const ans=arr.every((v,i) => v > 0)
+
+
+//  console.log(ans);   // ans true 
+ 
+
+// 7. Replace all odd numbers with "odd" 
+
+// const arr=[10, 15, 20, 25];
+
+// const ans=arr.map((v,i) => {
+//   if(v % 2 !== 0) {
+//     return 'odd';
+//   } else {
+//     return v;
+//   }
+// })
+
+
+// console.log(ans);   // ans [10, 'odd', 20, 'odd']
+
+
+// 8. Extract only first letters from each string 
+
+// const arr=["apple", "banana", "cat"]
+
+// const ans=arr.map((v,i) => v[0])
+
+// console.log(ans);  // ans  ['a', 'b', 'c']
+
+//  Filter numbers which are both even and greater than 30 
+
+// const arr=[10, 20, 32, 50, 75]
+
+// const ans=arr.filter((v,i) => v % 2 === 0 && v > 30 );
+
+// console.log(ans);  // ans [32, 50]
+
+
+// 9. Create an array of objects with index as key 
+
+// const arr=["a", "b", "c"];
+
+// const ans=arr.map((v,i) => {
+//   return {[i]:v};
+// });
+
+// console.log(ans);  
+
+// ans 
+ 
+// {0: 'a'}
+// {1: 'b'} 
+// {2: 'c'}
+
+
+// 10. Find how many numbers are greater than average 
+
+// const arr = [10, 20, 30, 40, 50];
+
+// let sum=0;
+// for(i=0; i<arr.length; i++) {
+//   sum+=arr[i]
+// }
+
+// console.log(sum);
+
+// const average=sum / arr.length
+
+// console.log(average);
+
+
+// const ans=arr.filter((v ,i) => v > average);
+
+// console.log(ans);    // ans [40, 50]
+
+
+// 11. Check if array has only one-digit numbers 
+
+// const arr= [3, 5, 9]
+
+// const ans=arr.every((v,i)=> v >= 0 && v <=10);
+
+// console.log(ans);   // ans true 
+
+// const arr= [30, 5, 9]
+
+// const ans=arr.every((v,i)=> v >= 0 && v <=10);
+
+// console.log(ans);  // false
+
+// 12. Create an array of numbers multiplied by their index 
+
+
+// const arr = [2, 4, 6];
+
+// const ans=arr.map((v,i)=> v * i)
+
+// console.log(ans); // ans  [0, 4, 12]
+
+// 13. Find total number of vowels in all strings 
+
+// const arr = ["apple", "orange"];
+
+// const vowels=['a','e','i','o','u']
+
+// const ans=arr.map((v) => v.toLowerCase()
+//               .split('')
+//               .filter((ch)=> vowels.includes(ch)).length
+//             )
+//             .reduce((acc,v,i) => acc+v,0)
+
+
+
+// console.log(ans);  // ans 5
+
+// 14. Extract all truthy values from array 
+
+// const arr = [0, false, "hi", null, 25, "", undefined];
+
+// const ans=arr.filter(Boolean);
+
+// console.log(ans);  // ans  ['hi', 25]
+
+// note : - Falsy values: 0, false, null, undefined, "", NaN 
+
+// 15. Reverse digits of each number 
+
+
+// const arr = [123, 45, 6];
+
+// const ans=arr.map((v,i) => {
+//   return Number(String(v).split('').reverse().join(''))
+// })
+
+// console.log(ans);  // ans  [321, 54, 6]
+
+// 16. Find product of even numbers  // product mean multiphication
+
+
+// const arr = [2, 4, 5, 6]; 
+
+// const ans=arr.filter((v,i)=> v % 2 === 0).reduce((acc,v1, i) => acc * v1,1)
+
+// console.log(ans);  // ans 48
+
+// 17. Return names of users above 18 years 
+
+// const arr = [
+//   { name: "Anu", age: 17 },
+//   { name: "Rita", age: 21 }
+// ];
+
+// const ans=arr.filter((v) => v.age > 18).map((v) => v.name)
+
+// console.log(ans);  // ans ['rita]
+
+// 18. Print Each Element of an Array 
+
+// const arr = [10, 20, 30];
+
+// arr.forEach((v) => {
+//   console.log(v);
+// });     // ans 10,20,30
+
+
+// 19. Convert All Strings to Uppercase 
+
+// const arr = ["apple", "banana", "grape"];
+
+// const ans = arr.map(v => v.toUpperCase());
+
+// console.log(ans);  // ans ['APPLE', 'BANANA', 'GRAPE']
+
+
+// 20. Check If Any Number Is Negative 
+
+// const arr = [1, -2, 3];
+
+// const ans = arr.some(v => v < 0);
+
+// console.log(ans);  // true
+
+// 21 Find the Largest Number 
+
+
+// const arr = [10, 50, 30,100,999,2];
+
+// const max = Math.max(...arr);
+
+// console.log(max);  // 999
+
+// 22. Remove Duplicate Values 
+
+// const arr = [1, 2, 2, 3, 4, 4 , 4 , 1 ,1];
+
+// const unic=[...new Set(arr)];
+
+// console.log(unic); // ans  [1, 2, 3, 4]
+
+
+// 23. Convert Number Array to String Array 
+
+
+// const arr = [1, 2, 3, 4, 5];
+
+// const ans=arr.map(String);
+
+// console.log(ans);  // ans (5) ['1', '2', '3', '4', '5']
+
+
+// 24. Count How Many Numbers Are Greater Than  10
+
+
+// const arr = [5, 11, 20, 4];
+
+// const count = arr.filter(v => v > 10).length;
+
+// console.log(count);  // ans 2
+
+
+// 25. Make First Letter Capital of All Strings
+
+
+
+// const arr = ["apple", "banana", "graps" ,"chiku"];
+
+// const result = arr.map(word => word[0].toUpperCase() + word.slice(1));
+
+// console.log(result);  // ans  ['Apple', 'Banana', 'Graps', 'Chiku']
+
+
+
+// let word = "apple";
+
+// let result = word.slice(1);
+
+// console.log(result);  // ans pple
+
+// 26  Count How Many Odd Numbers Are There
+
+
+// const arr = [2, 3, 5, 6, 7];
+// let count = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] % 2 !== 0) {
+//     count++;
+//   }
+// }
+
+// console.log("Total Odd Numbers =", count);
+
+// 27 Create a New Array with Each Value Double 
+
+
+// const arr=[2,4,6,8,10,12,14,16];
+
+// const double=[];
+
+// for(i=0; i<arr.length; i++) {
+//   double.push(arr[i]*2);
+// }
+
+// console.log(double);  // ans [4, 8, 12, 16, 20, 24, 28, 32]
+
+// 28 
 
