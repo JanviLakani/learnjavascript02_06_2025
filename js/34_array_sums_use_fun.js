@@ -1073,7 +1073,7 @@ console.log("hello java script");
 
 // const ans=arr.filter((v) => v.age > 18).map((v) => v.name)
 
-// console.log(ans);  // ans ['rita]
+// console.log(ans);  // ans ['rita']
 
 // 18. Print Each Element of an Array 
 
