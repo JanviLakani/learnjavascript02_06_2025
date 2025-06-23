@@ -15,7 +15,13 @@
 
     <br>
 
-    <input type="text" onkeyup="handleKeyUp()" id="search" name="serach" placeholder="search">
+    <input type="text" onkeyup="searchhandle()" id="search" name="serach" placeholder="search">
+
+    <select name="sort" id="sort" onchange="sorthandle()">
+        <option value="0">--select--</option>
+        <option value="atoz">A-Z</option>
+        <option value="ztoa">Z-A</option>
+    </select>
 
     <br>
 
