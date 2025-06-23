@@ -823,29 +823,7 @@
 
 
 // _________________________________________ 
-// console.log("hello git");
-console.log("hello java script");
 
-// console.log("hello java script");
-// console.log("hello java script");
-// console.log("hello java script");
-
-
-// console.log("learn javascript");
-// console.log("learn javascript");
-// console.log("learn javascript");
-// console.log("learn javascript");
-// console.log("learn javascript");
-// console.log("learn javascript");
-
-
-// console.log("hello");
-// console.log("hello");console.log("hello");console.log("hello");
-
-// console.log("yes");
-// console.log("yes");
-// console.log("yes");
-// console.log("yes");
 
 
 // 1 Square Only Even Numbers in an Array 
