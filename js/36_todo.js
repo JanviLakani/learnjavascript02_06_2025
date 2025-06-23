@@ -82,3 +82,26 @@ document.getElementById("todo").value='';
 
 display ();
 }
+
+const handleKeyUp = () => {
+    const s=document.getElementById("search").value;
+     // console.log(s,arr); 
+
+
+    const sData=arr.filter((v)=> v.toLowerCase().includes(s.toLowerCase()))
+
+    console.log(s,arr ,sData);
+
+    // arr nai same tya ni jm sData aave so 
+
+     let print = "";
+    sData.map((v, i) => {
+
+    print += `
+        <li>${v}<button onclick="handleedit(${i})">E</button><button onclick="handledelete(${i})">X</button></li>
+    `;
+
+    document.getElementById("disk").innerHTML = print;
+  });
+    
+}
