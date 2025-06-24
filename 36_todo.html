@@ -15,15 +15,16 @@
 
     <br>
 
-    <input type="text" onkeyup="searchhandle()" id="search" name="serach" placeholder="search">
+    <input type="text" onkeyup="filterHandle()" id="search" name="serach" placeholder="search">
 
-    <select name="sort" id="sort" onchange="sorthandle()">
+    <select name="sort" id="sort" onchange="filterHandle()">
         <option value="0">--select--</option>
         <option value="atoz">A-Z</option>
         <option value="ztoa">Z-A</option>
     </select>
 
     <br>
+
 
     <ul id="disk">
         
