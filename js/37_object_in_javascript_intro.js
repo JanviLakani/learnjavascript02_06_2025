@@ -13,35 +13,53 @@
 
 // console.log(person);
 
-const cars=["audi","volvo","BMW","Scross"];
+// const cars=["audi","volvo","BMW","Scross"];
 
-cars[3]="farari"   // array ma update
+// cars[3]="farari"   // array ma update
 
-console.log(cars);
+// console.log(cars);
 
-cars.push("TESLA");    // array ma add
+// cars.push("TESLA");    // array ma add
 
-console.log(cars);
+// console.log(cars);
 
 // ou can change the properties of a constant object: 
 
 
-const car={
-    name: "tesla",
-    model : 5005,
-    color : "black",
-    tyres : 4
-}
+// const car={
+//     name: "tesla",
+//     model : 5005,
+//     color : "black",
+//     tyres : 4
+// }
 
 
 
-car.color="white";   // change property 
+// car.color="white";   // change property 
 
-console.log(car);
+// console.log(car);
 
-car.owner="ms.roy"
+// car.owner="ms.roy" // add property 
 
-console.log(car);
+// console.log(car);
+
+// _____________________________________________ JavaScript For In
+// The key is used to access the value of the key 
+// Each iteration returns a key (x)
+
+// const myobj={
+//     name : "siya",
+//     age : 20,
+//     city : "surat"
+// }
+
+// for(let k in myobj) {
+//     console.log(myobj[k]);  // access the value
+    
+// }
+
+// ans siya ,20 ,surat  
+
 
 
 // ________________________________________________________ 

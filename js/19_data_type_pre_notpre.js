@@ -39,18 +39,18 @@ console.log(d , typeof d);   // aama je ans aave chhe e value ma je number
 
 // 5 undefined 
 
-let e;
+// let e;
 
-console.log(e, typeof e);
+// console.log(e, typeof e);
 
 
 // 6 null :- koi stu raja leva no chhe and ene jan kari chhe 
 // to e null aave chhe but e aaavito to nathi jo valu nathi null chhe
 
 
-let f = null;
+// let f = null;
 
-console.log(f , typeof f);  // ans object
+// console.log(f , typeof f);  // ans object
 
 // ans ma type of ma object aave chhe km ke null kai 
 // nathi maltu to e last ma object j bne chhe js ma 
@@ -58,9 +58,9 @@ console.log(f , typeof f);  // ans object
 
 
 
-// let text;
-// const myArray = text.split("");
+let text;
+const myArray = text.split("");
 
-// console.log(myArray);
+console.log(myArray);
 
 
