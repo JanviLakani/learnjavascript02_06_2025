@@ -395,62 +395,62 @@ const myObj = {
 
 // 7
 
-// let institues = [
-//     {
-//         name: 'ABC IT Institute',
-//         seat: [
-//             {
-//                 react: 15,
-//                 node: 20,
-//                 full_stack: 10,
-//                 ui_ux: 0
-//             },
-//         ]
-//     },
-//     {
-//         name: 'XYZ IT Institute',
-//         seat: [
-//             {
-//                 react: 0,
-//                 node: 70,
-//                 full_stack: 0,
-//                 ui_ux: 10
-//             },
-//         ]
-//     },
-//     {
-//         name: 'PQR IT Institute',
-//         seat: [
-//             {
-//                 react: 7,
-//                 node: 0,
-//                 full_stack: 0,
-//                 ui_ux: 0
-//             },
-//         ]
-//     },
-//     {
-//         name: 'MNP IT Institute',
-//         seat: [
-//             {
-//                 react: 0,
-//                 node: 0,
-//                 full_stack: 0,
-//                 ui_ux: 0
-//             },
-//         ]
-//     }
-// ]
+let institues = [
+    {
+        name: 'ABC IT Institute',
+        seat: [
+            {
+                react: 15,
+                node: 20,
+                full_stack: 10,
+                ui_ux: 0
+            },
+        ]
+    },
+    {
+        name: 'XYZ IT Institute',
+        seat: [
+            {
+                react: 0,
+                node: 70,
+                full_stack: 0,
+                ui_ux: 10
+            },
+        ]
+    },
+    {
+        name: 'PQR IT Institute',
+        seat: [
+            {
+                react: 7,
+                node: 0,
+                full_stack: 0,
+                ui_ux: 0
+            },
+        ]
+    },
+    {
+        name: 'MNP IT Institute',
+        seat: [
+            {
+                react: 0,
+                node: 0,
+                full_stack: 0,
+                ui_ux: 0
+            },
+        ]
+    }
+]
 
 
-// institues.map((v,i)=> {
-//     console.log("institues name :-",v.name);
-//     v.seat.map((v1) => {
-//         console.log("react :-",v1.react);
-//         console.log("node :-",v1.node);
-//         console.log("full_stack :-",v1.full_stack);
-//         console.log("ui_ux :-",v1.ui_ux);
+institues.map((v,i)=> {
+    console.log("institues name :-",v.name);
+    v.seat.map((v1) => {
+        console.log("react :-",v1.react);
+        console.log("node :-",v1.node);
+        console.log("full_stack :-",v1.full_stack);
+        console.log("ui_ux :-",v1.ui_ux);
         
-//     })
+    })
     
-// })
+})
