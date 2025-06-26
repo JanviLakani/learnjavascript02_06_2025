@@ -144,6 +144,47 @@
 
 // console.log(person);
 
+// ------------------------------------------------------------------------------- 
+
+
+// class 
+
+// const car={
+//     name: "tesla",
+//     model : 5005,
+//     color : "black",
+//     tyres : 4
+// }
+
+// console.log(Object.keys(car));
+
+// console.log(Object.values(car));
+
+// console.log(Object.entries(car));
+
+// console.log(Object.fromEntries(Object.entries(car)));
+
+// car.name="volvo";
+
+// console.log(car);
+
+// console.log(Object.freeze(car));
+
+// car.name="volvo";
+
+// console.log(car);
+
+// console.log(car.hasOwnProperty("color"));
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -197,26 +238,25 @@ let institues = [
     }
 ]
 
-
-let seatData=institues.map((v,i)=> {
-    console.log(seatData);
-    
-})
+console.log(institues); 
 
 
 
+let ans=institues.map((v)=> {
+    return {
+        name : v.name,
+        seat : [Object.fromEntries(Object.entries(v.seat[0]).filter(([key ,v1] ,i) => v1 > 0))]
+    }
+}).
+filter((v2) => Object.keys(v2.seat[0]).length > 0) 
 
-// institues.map((v,i) =>{
-//     console.log("institues name :-",v.name);
-//     v.seat.map((v1)=> {
-//         console.log("react",v1.react);
-//         console.log("node",v1.node);
-//         console.log("full_stack",v1.full_stack);
-//         console.log("ui_ux",v1.ui_ux);
-      
-//     })
-    
-// })
+console.log(ans);
+
+
+
+
+
+
 
 
 
