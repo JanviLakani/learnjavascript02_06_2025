@@ -287,23 +287,175 @@
 
 // Sirf important cheez dikhana, aur details chhupana. ex. car fan
 
-class fan{
-    #poweron = false;
+// class fan{
+//     #poweron = false;
 
-    turnon(){
-        this.#poweron=true;
-        console.log("fan is on");
+//     turnon(){
+//         this.#poweron=true;
+//         console.log("fan is on");
         
+//     }
+
+//     turnof(){
+//         this.#poweron=false;
+//         console.log("fan is off");
+        
+//     }
+// }
+
+// let myfan =new fan();
+
+// myfan.turnon();  // fan is on
+// myfan.turnof();  // fan is off
+
+// _______________________________________________________________________________________ class Oops Concept 
+
+
+// class bilding{
+//     constructor(w,l){
+//         this.width=w;
+//         this.length=l;
+//     }
+
+//     area(){
+//         console.log("bilding arear is :", this.width*this.length);
+        
+//     }
+// }
+
+// const b1=new bilding(150 ,100);
+
+// b1.area();  // ans bilding arear is : 15000
+
+
+// ______________________________________________________________________________________ 
+
+// 1. WAP to get and display 2 Cars informationusing class and object by including below
+// mentioned attributes:
+// - car_id
+// - car_company_name
+// - car_color
+// - car_release_year
+
+
+// class cars{
+//     constructor(i){
+//        this.car_id=i;
+//        this.car_company_name=''
+//        this.car_color='';
+//        this.car_release_year=''
+
+//     }
+
+//     getcarinfo(){
+//        this.car_company_name=prompt(`"plase enter car company name ${this.car_id}"`); 
+//        this.car_color=prompt(`"enter car name ${this.car_id}"`);
+//        this.car_release_year=prompt(`"car release year ${this.car_id}"`);
+//     }
+
+//     displayinfo(){
+//         console.log(this.car_id);   
+//         console.log(this.car_company_name);
+//         console.log(this.car_color);
+//         console.log(this.car_release_year);
+        
+        
+//     }
+// }
+
+// const c1=new cars(545454);
+
+// c1.getcarinfo();
+// c1.displayinfo();
+
+// const c2=new cars(565656);
+
+// c2.getcarinfo();
+// c2.displayinfo();
+
+// --------------------------------------------------------- 
+
+// 2. WAP to create a class to read and add two distance. (e.g. 8 feet 16 inch + 4 feet 14 inch = 14 feet 6 inch)   
+
+class distance{
+    constructor(){
+        this.feet=0;
+        this.inch=0;
     }
 
-    turnof(){
-        this.#poweron=false;
-        console.log("fan is off");
-        
+    distanceinfo(){
+        this.feet=parseInt(prompt("please enter feet :"))
+         this.inch=parseInt(prompt("please enter inch :"))
     }
+
+    distanceadd(af,ai,bf,fi){
+        // console.log(af,ai,bf,fi); 
+
+        totalf=af+bf;
+        totali=ai+Bi;
+
+        console.log(totalf);
+        console.log(totali);
+        
+        
+        
+        
+
+    }
+
 }
 
-let myfan =new fan();
+const d1=new distance();
+d1.distanceinfo();
 
-myfan.turnon();  // fan is on
-myfan.turnof();  // fan is off
+// console.log(d1.feet,d1.inch); 
+
+
+const d2=new distance();
+
+d2.distanceinfo()
+
+d2.distanceadd(d1.feet,d1.inch , d2.feet , d2.inch)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class car{
+//     constructor(cname,color){
+//         this.company_name=cname
+//         this.color=color;   
+//     }
+
+//     display(){
+//         console.log(`company name is ${this.company_name} and car color is ${this.color}`);
+        
+//     }
+
+//     getid(){
+
+//     }
+// }
+
+// const c1=new car("royal" ,"black");
+
+// c1.display();
