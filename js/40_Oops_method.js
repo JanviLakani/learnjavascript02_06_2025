@@ -388,15 +388,21 @@ class distance{
          this.inch=parseInt(prompt("please enter inch :"))
     }
 
-    distanceadd(af,ai,bf,fi){
+    distanceadd(af,ai,bf,bi){
         // console.log(af,ai,bf,fi); 
 
-        totalf=af+bf;
-        totali=ai+Bi;
+        let totalf=af+bf;
+        let totali=ai+bi;
 
         console.log(totalf);
         console.log(totali);
         
+        if(totali >= 12) {
+            totalf += Math.floor(totali / 12);
+            totali = totali % 12;
+        }
+
+        console.log(` total distance is ${totalf} feet ${totali} inch`);
         
         
         
@@ -419,25 +425,7 @@ d2.distanceadd(d1.feet,d1.inch , d2.feet , d2.inch)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// 12 30 // total distance is 14 feet 6 inch
 
 
 // class car{
