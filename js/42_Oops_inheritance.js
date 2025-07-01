@@ -336,249 +336,179 @@
 // s3.setBaseRate(3.1);
 // s3.getROI();
 
-// _____________________________________________________ 
+// _____________________________________________________
 
+// class Animal{
 
-class Animal{
+//     name;
+//     age;
 
-    name;
-    age;
+//     set_value(name , age){
+//         this.name=name;
+//         this.age=age
+//     }
 
-    set_value(name , age){
-        this.name=name;
-        this.age=age
+// }
 
-        console.log("animal name is" , this.name);
-        console.log("animal age is " , this.age);    
-    }
+// class Zebra extends Animal{
+//     showinfo(){
 
-}
+//         console.log("animal name", this.name );
+//         console.log("animal age" , this.age);
+//         console.log("place of origin", "Africa");
+//         console.log("zebra eat" , "grass");
 
-class Zebra extends Animal{
-    showinfo(){
-      
-        // console.log("animal name", this.name );
-        // console.log("animal age" , this.age);
-        console.log("place of origin", "Africa");
-        console.log("zebra eat" , "grass");
-        
-        
-      
-    }
-}
+//     }
+// }
 
-class Lion extends Animal{
-      showinfo(){
-        
-        // console.log("animal name" , this.name );
-        // console.log("animal age" , this.age);
-        console.log("place of origin " , "gir forest");
-        console.log("lion eat" , "meat");
-        
-        
-      
-    }
-}
+// class Lion extends Animal{
+//       showinfo(){
 
-const a1= new Zebra();
-a1.set_value("zibra",12);
-a1.showinfo();
+//         console.log("animal name" , this.name );
+//         console.log("animal age" , this.age);
+//         console.log("place of origin " , "gir forest");
+//         console.log("lion eat" , "meat");
 
-const a2=new Lion();
-a2.set_value("line" ,18);
-a2.showinfo();
+//     }
+// }
 
-// ______________________________________________________________ 
+// const a1= new Zebra();
+// a1.set_value("zibra",12);
+// a1.showinfo();
 
-// Q1. What does a class represent in JavaScript?
-// A) A CSS rule
-// B) A blueprint for creating objects
-// C) A loop structure
-// D) A data type
+// const a2=new Lion();
+// a2.set_value("line" ,18);
+// a2.showinfo();
 
+// ______________________________________________________________
 
-//  Q2. How do you create an object from a class called Person?
-// A) const p = Person();
-// B) const p = new Person();
-// C) Person p = new Person();
-// D) p = make(Person);
+// Encapsulation :- class work
 
+// class Employee {
+//   id;
+//   name;
+//   #salary;
+//   #insentive;
 
-// Q3. Which keyword is used for inheritance in JavaScript?
-// A) inherit
-// B) extends
-// C) super
-// D) prototype
+//   constructor(i, n, s) {
+//     this.id = i;
+//     this.name = n;
+//     this.#salary = s;
+//   }
+
+// //   setter
+
+// set insentive(i){
+//     this.#insentive=i
+// }
+
+// get insentive(){
+//     return insentive;
+// }
+
+//   showdata() {
+//     console.log("id :", this.id);
+//     console.log("name :", this.name);
+//     console.log("salary :", this.#salary);
+//   }
+// }
+
+// const e1 = new Employee(101, "siya", 30000);
+
+// e1.salary=5000 // easyly koi bhi change kari le chhe chho aavi propety ne privete banavi ne use karvi
+// console.log(e1.name , e1.id , e1.#salary);  // error aavshe km k property private kari hovathi class bar teno access nathi
+
+// e1.showdata();
+
+// e1.insentive=2000;
+
+// console.log("insentive ", e1.insentive);
+
+// ___________________________________________________________________
+
+// // ebstration
+
+//   class Car{
+//     brand;
+
+//     constructor(b){
+//         this.brand=b;
+//     }
+
+//     startcar(){
+//         this.#startengine(); // function ne call karva bracket aapvu pde
+//         console.log(`welcome to the  ${this.brand} car start`);
+
+//     }
+
+//     #startengine(){
+//         console.log("engin start");
+
+//     }
+//   }
+
+//   const c1=new Car("honada")
+//   c1.startcar();
+// ________________________________
+
+    // add(){
+    //     if(c=== undefined) {
+    //         r
+    //     }
+    // }
+
+// __________________________________________________________________________
+
+// Polymorphism
 
 // class Animal {
-//   name = "Tiger";
+//   // niche na koi function call karvi etle upar nu function overhide thai chhe jm ke
+//   // d1.getvoice karvi to animal and dog banne nu malvu joye but dog voice j mle chhe etel aamne *overhide* pn kevai
+//   getvoice() {
+//     console.log("Animal voice");
+//   }
 // }
-// const a = new Animal();
-// console.log(a.name);
+// class Dog extends Animal {
+//   getvoice() {
+//     console.log("Dog voice");
+//   }
+// }
 
-// A) Tiger
-// B) name
-// C) undefined
-// D) Error
+// class Cat extends Animal {
+//   getvoice() {
+//     console.log("Cat voice");
+//   }
+// }
 
+// const d1 = new Dog();
+// d1.getvoice();
 
-// What does this.name refer to inside a class?
-// A) The parent class
-// B) Global variable
-// C) The class name
-// D) The current object’s name property
-
-// Q9. Which keyword is used in child class to call the parent class constructor?
-// A) parent()
-// B) this()
-// C) super()
-// D) extends()
-
-
-// Which line correctly defines a class named Animal?
-// A) let Animal = function() {}
-// B) class Animal {}
-// C) object Animal()
-// D) new class Animal {}
-
-
-//  In inheritance, what is passed from parent to child?
-// A) Only constructors
-// B) Only name and age
-// C) Properties and methods
-// D) Only static variables
-
-// Q4. What does the new keyword do?
-// A) It creates a new class
-// B) It defines a method
-// C) It creates a new object from a class
-// D) It destroys an object
-
-// class student{  int marks;  };
-// class topper:public student{  int age;  topper(int age){ this.age=age; } };
-// a) Encapsulation and Inheritance
-// b) Inheritance and polymorphism
-// c) Polymorphism
-// d) Inheritance
-
-// Answer: a
-// Explanation: Encapsulation is indicated by use of classes.
-//  Inheritance is shown by inheriting the student class into 
-//  topper class. Polymorphism is not shown here because we have 
-//  defined the constructor in the topper class but that doesn’t mean
-//   that default constructor is overloaded.
-
-
-// On what basis is it determined, when a variable comes into existence in memory? 
-
-// a) data type 
-// b) storage class
-// c) scope
-// d) all of the above
-
-// ans b) storage class :-  A variable that comes into existence in memory is determined by storage class.
-
-
-// Select the following which shows the correct constructor. 
-// a)  ()class_name
-// b) ()-class_name
-// c) class_name() 
-// d) ~class_name() 
-
-// ans c) class_name() :- is the correct constructor.
-
-
-// When is the object created with a new keyword? 
-
-// a)  at run time
-// b) at compile time
-// c) depend on the code
-// d) none
-
-// Explanation - A) The object created with a new keyword during run-time. 
-
-// a)  
-// b)
-// c) 
-// d) 
-
-// 1. What is the primary goal of Object-Oriented Programming (OOP) in JavaScript?  
-// a) To make the code shorter and more concise. 
-// b) Organize code into classes and objects. 
-// c) To execute code faster than procedural programming. 
-// d) To eliminate the need for functions. 
-
-// ans :- b) Organize code into classes and objects.
-
-// 2. What is a class in JavaScript? 
-// a) A built-in object provided by the JavaScript runtime. 
-// b) A blueprint or template for creating objects with shared properties and methods. 
-// c) A single function used to define the behavior of an object. 
-// d) A reserved keyword used to declare variables. 
-
-// ans :- b ) A blueprint or template for creating objects with shared properties and methods. 
-// A class in JavaScript is a blueprint or template that defines the structure 
-// and behavior of objects. It serves as a prototype for creating 
-// instances (objects) with shared properties and methods.
-
-
-// 4. Which keyword is used to refer to the current instance of a class inside its methods? 
-// a) self 
-// b) this 
-// c) it 
-// d) current 
-
-// The this keyword is used to refer to the current instance of a class inside its methods.
-//  It allows access to the object's properties and methods.
+// const c1 = new Cat();
+// c1.getvoice();
 
 
 
+class Claci{
+    // add(a,b){
+    //     return a,b
+        
+    // }
 
+    // add(a,b,c){
+    //     return a,b,c
+    // }
 
+    add(a,b,c) {
+        if(c === undefined) {
+            return a+b
+        } else{
+            return a+b+c
+        }
+    }
 
+}
 
-// 6. What is the purpose of the constructor method in a class? 
-// a) To create new instances of the class. 
-// b) To define class properties. 
-// c) To create private variables. 
-// d) To execute code when the class is inherited. 
+const c1=new Claci();
+c1.add(10,20);
 
-//  ans :- a) To create new instances of the class. 
-// The constructor() method is a special method inside a class.
-// Jab bhi aap new ClassName() likhte ho, constructor automatically call hota hai.
-// Iska kaam hai:
-// Object banate waqt initial values set karna
-// Class ke properties ko value dena
-
-
-// What is the concept of "inheritance" in OOPS? 
-// a) The process of hiding the implementation details of an object. 
-// b) The process of defining multiple constructors for a class. 
-// c) The process of creating a new class from an existing class, inheriting its properties and methods. 
-// d) The process of modifying the internal state of an object. 
-
-
-// ans  c) The process of creating a new class from an existing class, inheriting its properties and methods.
-
-// Inheritance allows a new class (subclass) to inherit properties and methods from an
-//  existing class (superclass), promoting code reusability and hierarchy.
-
-
-// 8. How do you implement inheritance in JavaScript classes? 
-// a) Using the extends keyword and specifying the parent class. 
-// b) Using the inherits keyword and specifying the parent class. 
-// c) Using the super() method to inherit properties from the parent class. 
-// d) Using the inheritFrom keyword and specifying the parent class. 
-
-// ans  a) Using the extends keyword and specifying the parent class. 
-
-// In JavaScript, you implement inheritance by using the extends keyword in the class 
-// declaration of the subclass, followed by the parent class name.
-
-
-
-
-// https://www.sanfoundry.com/1000-object-oriented-programming-oops-questions-answers/#google_vignette 
-
-// https://www.javaguides.net/2023/07/javascript-object-oriented-programming.html 
-
+c1.add(10,20,30);
