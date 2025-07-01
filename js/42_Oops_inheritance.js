@@ -384,45 +384,48 @@
 
 // Encapsulation :- class work
 
-// class Employee {
-//   id;
-//   name;
-//   #salary;
-//   #insentive;
+class Employee {
+  id;
+  name;
+  #salary;
+  #insentive;
 
-//   constructor(i, n, s) {
-//     this.id = i;
-//     this.name = n;
-//     this.#salary = s;
-//   }
+  constructor(i, n, s) {
+    this.id = i;
+    this.name = n;
+    this.#salary = s;
+  }
 
-// //   setter
+// setter
 
-// set insentive(i){
-//     this.#insentive=i
-// }
+  set insentive(i) {
+    this.#insentive = i;
+  }
 
-// get insentive(){
-//     return insentive;
-// }
+// getter 
 
-//   showdata() {
-//     console.log("id :", this.id);
-//     console.log("name :", this.name);
-//     console.log("salary :", this.#salary);
-//   }
-// }
+  get insentive() {
+    return this.#insentive;
+  }
 
-// const e1 = new Employee(101, "siya", 30000);
+  showdata() {
+    console.log("id :", this.id);
+    console.log("name :", this.name);
+    console.log("salary :", this.#salary);
+    console.log("bonus", this.#salary * 0.05);
+  }
+}
 
-// e1.salary=5000 // easyly koi bhi change kari le chhe chho aavi propety ne privete banavi ne use karvi
+const e1 = new Employee(101, "siya", 30000);
+
+// e1.salary = 5000; // easyly koi bhi change kari le chhe chho aavi propety ne privete banavi ne use karvi
 // console.log(e1.name , e1.id , e1.#salary);  // error aavshe km k property private kari hovathi class bar teno access nathi
 
-// e1.showdata();
+e1.showdata();
 
-// e1.insentive=2000;
+e1.insentive = 2000;
 
-// console.log("insentive ", e1.insentive);
+console.log("insentive", e1.insentive);
 
 // ___________________________________________________________________
 
@@ -450,12 +453,6 @@
 //   const c1=new Car("honada")
 //   c1.startcar();
 // ________________________________
-
-    // add(){
-    //     if(c=== undefined) {
-    //         r
-    //     }
-    // }
 
 // __________________________________________________________________________
 
@@ -486,29 +483,28 @@
 // const c1 = new Cat();
 // c1.getvoice();
 
+// ====================================
 
+// class Claci {
+//   // add(a,b){
+//   //     return a+b;
 
-class Claci{
-    // add(a,b){
-    //     return a,b
-        
-    // }
+//   // }
 
-    // add(a,b,c){
-    //     return a,b,c
-    // }
+//   // add(a,b,c){
+//   //     return a+b+c;
+//   // }
 
-    add(a,b,c) {
-        if(c === undefined) {
-            return a+b
-        } else{
-            return a+b+c
-        }
-    }
+//   add(a, b, c) {
+//     if (c === undefined) {
+//       return a + b;
+//     } else {
+//       return a + b + c;
+//     }
+//   }
+// }
 
-}
+// const c1 = new Claci();
 
-const c1=new Claci();
-c1.add(10,20);
-
-c1.add(10,20,30);
+// console.log(c1.add(10, 20));
+// console.log(c1.add(10, 20, 30));
