@@ -65,18 +65,32 @@ class Expenses {
     handleexpenses(){
         event.preventDefault();
 
-        console.log("hello22222" ,this.Expenses_amt.value); 
+        // console.log("hello22222" ,this.Expenses_amt.value); 
         
 
         if(this.Expenses_name.value === '') {
             document.getElementById("expenses_name_err").innerHTML='please enter expenses name'
         } else{
             document.getElementById("expenses_name_err").innerHTML=''
+
+            localStorage.setItem("expences_key1", JSON.stringify(this.Expenses_amt.value))
+
+            e1.handle_Name_Data();
         }
 
         // console.log("hjhj");
         
     }
+
+    handle_Name_Data(){
+        const expenses_nvalue=JSON.parse(localStorage.getItem("expences_key1"))
+
+        if(expenses_nvalue){
+            document.getElementById("expenses_name").innerHTML=expenses_nvalue
+        }
+    }
+
+
 
     handleamt(){
              event.preventDefault();
@@ -90,11 +104,11 @@ class Expenses {
             } else {
                  document.getElementById("expenses_amt_err").innerHTML=""
 
-                //  localStorage.setItem("expenses",this.Expenses_amt.value)  //10  key & value
+                 localStorage.setItem("expenses_key2",this.Expenses_amt.value)  //10  key & value
 
-                // e1.handledata();
+                e1.handledata();
 
-                // this.Expenses_amt.value=''
+                this.Expenses_amt.value=''
 
             }
         }
@@ -102,16 +116,16 @@ class Expenses {
         
     }
 
-    //  handleamtdata(){
+     handleamtdata(){
         
-    //     const Expensesvalue=localStorage.getItem("expenses");
+        const Expensesvalue=localStorage.getItem("expenses_key2");
 
-    //     // console.log("555"); 
+        // console.log("555"); 
         
-    //    if(Expensesvalue) {
-    //     document.getElementById("expenses_amt").innerHTML=Expensesvalue
-    //    }
-    // }
+       if(Expensesvalue) {
+        document.getElementById("expenses_amt").innerHTML=Expensesvalue
+       }
+    }
 
 
 }

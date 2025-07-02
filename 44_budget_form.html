@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      .color{
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <form action="" id="budget_form">
-      <input type="text" id="form_input" placeholder="add your budget" />
+      <p>Add your Budget</p>
+      <input type="text" id="form_input" placeholder="add your budget" /> <br>
 
-      <span id="form_err"></span> <br /><br />
+      <span id="form_err" class="color"></span> <br /><br />
 
       <input type="submit" />
 
@@ -22,13 +29,16 @@
 
     <br>
     <form action="" id="expenses_form">
-      <input type="text" id="expenses_input" placeholder="add your expenses" />
 
-      <span id="expenses_name_err"></span> <br/><br/>
+      <P>Add your expense name</P>
+      <input type="text" id="expenses_input" placeholder="add your expenses" /> <br>
 
+      <span id="expenses_name_err" class="color"></span> <br/>
+
+      <P>Add your expense Amount</P>
       <input type="text" id="amt_input" placeholder="add your amount" /> <br>
 
-      <span id="expenses_amt_err"></span><br><br>
+      <span id="expenses_amt_err" class="color"></span><br><br>
 
       <input type="submit" /> 
     </form>
