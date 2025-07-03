@@ -30,12 +30,29 @@ class Budget{    //3
     handledata(){
         
         const budgetvalue=localStorage.getItem("budget");
+        const expencess=JSON.parse(localStorage.getItem("expence"));
 
-        // console.log("555"); 
+        console.log(expencess);
+        
+
         
        if(budgetvalue) {
         document.getElementById("budget_data").innerHTML=budgetvalue
        }
+
+       let addexpence=0;
+
+       if(expencess) {
+        addexpence=expencess.reduce((acc,v)=> acc + v.amount,0);
+        document.getElementById("expenses_add").innerHTML=addexpence;
+        console.log(addexpence);
+       }
+
+
+       
+       
+
+
     }
 } 
 
@@ -56,76 +73,109 @@ budget.addEventListener("submit" , function(){    // 2
 // =========================================================== class 2 
 
 
-class Expenses {
+class Expenses extends Budget{
+    
     constructor(){
+        super();
         this.Expenses_name=document.getElementById("expenses_input")
         this.Expenses_amt=document.getElementById("amt_input")
     }
 
+     
     handleexpenses(){
         event.preventDefault();
 
         // console.log("hello22222" ,this.Expenses_amt.value); 
         
 
+       let dataAdd=false;
+
         if(this.Expenses_name.value === '') {
             document.getElementById("expenses_name_err").innerHTML='please enter expenses name'
+             dataAdd=true;
         } else{
             document.getElementById("expenses_name_err").innerHTML=''
 
-            localStorage.setItem("expences_key1", JSON.stringify(this.Expenses_amt.value))
-
-            e1.handle_Name_Data();
         }
 
-        // console.log("hjhj");
-        
-    }
 
-    handle_Name_Data(){
-        const expenses_nvalue=JSON.parse(localStorage.getItem("expences_key1"))
-
-        if(expenses_nvalue){
-            document.getElementById("expenses_name").innerHTML=expenses_nvalue
-        }
-    }
-
-
-
-    handleamt(){
-             event.preventDefault();
-        // console.log("hello",this.Budget.value);       //8
-
-        if(this.Expenses_amt.value === '') {              //9
+        if(this.Expenses_amt.value === '') {              
             document.getElementById("expenses_amt_err").innerHTML="please enter expenses"
+             dataAdd=true;
         } else {
             if((isNaN(this.Expenses_amt.value)) || parseFloat(this.Expenses_amt.value) <= 0 ) {
                  document.getElementById("expenses_amt_err").innerHTML="please enter valid input"
+                  dataAdd=true;
             } else {
                  document.getElementById("expenses_amt_err").innerHTML=""
 
-                 localStorage.setItem("expenses_key2",this.Expenses_amt.value)  //10  key & value
-
-                e1.handledata();
-
-                this.Expenses_amt.value=''
-
+    
             }
         }
 
+        if(!dataAdd){
+
+            let obj={
+                id : Math.floor(Math.random()*1000),
+                name : this.Expenses_name.value,
+                amount :parseFloat(this.Expenses_amt.value)
+            }
+
+            console.log(obj);
+
+
+        let localdata=JSON.parse(localStorage.getItem("expence") ) || [];
+
+        console.log(localdata);
+
+
+        localdata.push(obj)
+
+
+        localStorage.setItem("expence" ,JSON.stringify(localdata));
+
+        this.handledata();
+         
+        }
+
+
+
+   
+        
+
+        
+        
+
+      
         
     }
 
-     handleamtdata(){
-        
-        const Expensesvalue=localStorage.getItem("expenses_key2");
 
-        // console.log("555"); 
+
+    // handleamt(){
+    //          event.preventDefault();
+    //     // console.log("hello",expenses_amt_err.value);      
+
+    //     if(this.Expenses_amt.value === '') {              
+    //         document.getElementById("expenses_amt_err").innerHTML="please enter expenses"
+    //     } else {
+    //         if((isNaN(this.Expenses_amt.value)) || parseFloat(this.Expenses_amt.value) <= 0 ) {
+    //              document.getElementById("expenses_amt_err").innerHTML="please enter valid input"
+    //         } else {
+    //              document.getElementById("expenses_amt_err").innerHTML=""
+
+           
+
+               
+
+    //         }
+    //     }
+
         
-       if(Expensesvalue) {
-        document.getElementById("expenses_amt").innerHTML=Expensesvalue
-       }
-    }
+    // }
+
+
+     // this.Expenses_amt.value=''
 
 
 }
@@ -138,7 +188,7 @@ expenses.addEventListener("submit" ,function(){
 
     console.log("yes2222");
 
-    e1.handleamt();
+    // e1.handleamt();
     
 
 })
