@@ -32,7 +32,7 @@ class Budget{    //3
         const budgetvalue=localStorage.getItem("budget");
         const expencess=JSON.parse(localStorage.getItem("expence"));
 
-        console.log(expencess);
+        // console.log(expencess);/
         
 
         
@@ -49,7 +49,9 @@ class Budget{    //3
        }
 
 
-       
+       let total= parseFloat(budgetvalue || 0) - addexpence ;
+
+       document.getElementById("balance").innerHTML=total
        
 
 
@@ -135,47 +137,14 @@ class Expenses extends Budget{
         localStorage.setItem("expence" ,JSON.stringify(localdata));
 
         this.handledata();
+
+           this.Expenses_name.value = '';
+           this.Expenses_amt.value = '';
          
         }
-
-
-
-   
-        
-
-        
-        
-
-      
         
     }
 
-
-
-    // handleamt(){
-    //          event.preventDefault();
-    //     // console.log("hello",expenses_amt_err.value);      
-
-    //     if(this.Expenses_amt.value === '') {              
-    //         document.getElementById("expenses_amt_err").innerHTML="please enter expenses"
-    //     } else {
-    //         if((isNaN(this.Expenses_amt.value)) || parseFloat(this.Expenses_amt.value) <= 0 ) {
-    //              document.getElementById("expenses_amt_err").innerHTML="please enter valid input"
-    //         } else {
-    //              document.getElementById("expenses_amt_err").innerHTML=""
-
-           
-
-               
-
-    //         }
-    //     }
-
-        
-    // }
-
-
-     // this.Expenses_amt.value=''
 
 
 }
