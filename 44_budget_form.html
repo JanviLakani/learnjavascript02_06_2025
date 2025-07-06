@@ -5,47 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <style>
+    <!-- <style>
       .color{
         color: red;
       }
-    </style>
+    </style> -->
+
+    <link rel="stylesheet" href="44_budet_form.css" />
   </head>
   <body>
     <form action="" id="budget_form">
       <p>Add your Budget</p>
-      <input type="text" id="form_input" placeholder="add your budget" /> <br>
+      <input type="text" id="form_input" placeholder="add your budget" /> <br />
 
       <span id="form_err" class="color"></span> <br /><br />
 
       <input type="submit" />
-
-    </form> <br>
+    </form>
+    <br />
 
     <p>Total Budget</p>
     <span id="budget_data"></span>
 
-    
+    <hr />
+    <hr />
 
-
-
-
-    <hr><hr>
-
-    <br>
+    <br />
     <form action="" id="expenses_form">
+      <p>Add your expense name</p>
+      <input type="text" id="expenses_input" placeholder="add your expenses" />
+      <br />
 
-      <P>Add your expense name</P>
-      <input type="text" id="expenses_input" placeholder="add your expenses" /> <br>
+      <span id="expenses_name_err" class="color"></span> <br />
 
-      <span id="expenses_name_err" class="color"></span> <br/>
+      <p>Add your expense Amount</p>
+      <input type="text" id="amt_input" placeholder="add your amount" /> <br />
 
-      <P>Add your expense Amount</P>
-      <input type="text" id="amt_input" placeholder="add your amount" /> <br>
+      <span id="expenses_amt_err" class="color"></span><br /><br />
 
-      <span id="expenses_amt_err" class="color"></span><br><br>
-
-      <input type="submit" /> 
+      <input type="submit" />
     </form>
 
     <p>Total Expenses</p>
@@ -53,12 +51,13 @@
 
     <!-- <span id="expenses_amt"></span>  -->
 
-    <P>Save Balance</P>
-    <span id="balance"></span> <br><br>
+    <p>Save Balance</p>
+    <span id="balance"></span> <br /><br />
 
     <p>expense list</p>
     <div id="expdata"></div>
 
+ 
     <script src="js/44_budget_form.js"></script>
   </body>
 </html>

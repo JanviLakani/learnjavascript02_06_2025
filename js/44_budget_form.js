@@ -1,4 +1,7 @@
-// =========================================================== class 1
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
 class Budget {
   //3
   constructor() {
@@ -124,10 +127,20 @@ class Expenses extends Budget {
 
       if(this.update === null) {
          localdata.push(obj);
-      } {
-        const i=localdata.findindex((v,i) => v.i === obj.update )
+        this.DisplayBudget(obj);
+      } else {
+        const i=localdata.findIndex((v,i) => v.id === this.update )
         localdata[i]=obj
-        this.update=nulll
+
+        const parent =document.getElementById("expdata");
+         const oldChild = document.getElementById(`row ${this.update}`);  //jiski id jo hamne click kiya vo this.update me save karta hai 
+         const newChild=this.createUpdatedDiv(obj);
+
+         if(oldChild) {
+          parent.replaceChild(newChild,oldChild)
+         }
+
+        this.update=null
       }
 
       // localdata.push(obj);  // cut 
@@ -141,7 +154,7 @@ class Expenses extends Budget {
       this.Expenses_name.value = "";
       this.Expenses_amt.value = "";
 
-      this.DisplayBudget(obj);
+      // this.DisplayBudget(obj);   // 1
     }
   }
 
@@ -166,7 +179,9 @@ class Expenses extends Budget {
       this.Expenses_name.value=obj.name;
       this.Expenses_amt.value=obj.amount;
 
-      this.update=null;
+      // this.update=null; 
+
+      this.update=obj.id;
 
 
     })
@@ -183,6 +198,7 @@ class Expenses extends Budget {
       this.handledata();
     });
 
+
     divEle.appendChild(namespan);
     divEle.appendChild(amtspan);
     divEle.appendChild(namebtn);
@@ -191,6 +207,48 @@ class Expenses extends Budget {
     const epen = document.getElementById("expdata");
     epen.appendChild(divEle);
   }
+
+
+  // ======================================= 
+
+  createUpdatedDiv(obj) {
+  const divEle = document.createElement("div");
+  divEle.setAttribute("id", `row ${obj.id}`);
+
+  const namespan = document.createElement("span");
+  namespan.textContent = obj.name;
+
+  const amtspan = document.createElement("span");
+  amtspan.textContent = obj.amount;
+
+  const namebtn = document.createElement("button");
+  namebtn.textContent = "X";
+  const amtbtn = document.createElement("button");
+  amtbtn.textContent = "E";
+
+  amtbtn.addEventListener("click", () => {
+    this.Expenses_name.value = obj.name;
+    this.Expenses_amt.value = obj.amount;
+    this.update = obj.id;
+  });
+
+  namebtn.addEventListener("click", () => {
+    divEle.remove();
+    const locaExp = JSON.parse(localStorage.getItem("expence"));
+    const exvalue = locaExp.filter((v) => v.id !== obj.id);
+    localStorage.setItem("expence", JSON.stringify(exvalue));
+    this.handledata();
+  });
+
+  divEle.appendChild(namespan);
+  divEle.appendChild(amtspan);
+  divEle.appendChild(namebtn);
+  divEle.appendChild(amtbtn);
+
+  return divEle; 
+}
+
+  // ========================================== 
 }
 
 const e1 = new Expenses();
@@ -212,8 +270,4 @@ expenses.addEventListener("submit", function () {
   console.log("yes2222");
 
   // e1.handleamt();
-});
-
-
-
-// updatte=null 
+});       
