@@ -111,32 +111,53 @@ class Expenses extends Budget {
     }
 
     if (!dataAdd) {
-      let obj = {
-        id: Math.floor(Math.random() * 1000),
-        name: this.Expenses_name.value,
-        amount: parseFloat(this.Expenses_amt.value),
-      };
+      // let obj = {
+      //   id: Math.floor(Math.random() * 1000),
+      //   name: this.Expenses_name.value,
+      //   amount: parseFloat(this.Expenses_amt.value),
+      // };
 
-      console.log(obj);
+      // console.log(obj);
 
       let localdata = JSON.parse(localStorage.getItem("expence")) || [];
 
       console.log(localdata);
 
       if (this.update === null) {
+        let obj = {
+          id: Math.floor(Math.random() * 1000),
+          name: this.Expenses_name.value,
+          amount: parseFloat(this.Expenses_amt.value),
+        };
+
         localdata.push(obj);
         this.DisplayBudget(obj);
       } else {
+        let obj = {
+          id: this.update,
+          name: this.Expenses_name.value,
+          amount: parseFloat(this.Expenses_amt.value),
+
+        };
+
         const i = localdata.findIndex((v, i) => v.id === this.update);
         localdata[i] = obj;
 
-        const parent = document.getElementById("expdata");
-        const oldChild = document.getElementById(`row ${this.update}`); //jiski id jo hamne click kiya vo this.update me save karta hai
-        const newChild = this.createUpdatedDiv(obj);
+        // ----------------------------------------------  change when use replaceChild
 
-        if (oldChild) {
-          parent.replaceChild(newChild, oldChild);
-        }
+        // const parent = document.getElementById("expdata");
+        // const oldChild = document.getElementById(`row ${this.update}`); //jiski id jo hamne click kiya vo this.update me save karta hai
+        // const newChild = this.createUpdatedDiv(obj);
+
+        // if (oldChild) {
+        //   parent.replaceChild(newChild, oldChild);
+        // }
+
+        // ----------------------------------------------
+
+        const divEle = document.getElementById(`row ${this.update}`);
+        divEle.childNodes[0].innerHTML = obj.name;
+        divEle.childNodes[1].innerHTML = obj.amount;
 
         this.update = null;
       }
@@ -172,12 +193,19 @@ class Expenses extends Budget {
     amtbtn.textContent = "E";
 
     amtbtn.addEventListener("click", () => {
-      this.Expenses_name.value = obj.name;
-      this.Expenses_amt.value = obj.amount;
 
-      // this.update=null;
+      const localexpenses=JSON.parse(localStorage.getItem("expence"));
 
-      this.update = obj.id;
+      const newObj=localexpenses.find((v) => v.id === obj.id)
+
+      this.Expenses_name.value = newObj.name;
+      this.Expenses_amt.value = newObj.amount;
+
+     
+
+      this.update = newObj.id;
+
+       // this.update=null;
     });
 
     namebtn.addEventListener("click", () => {
@@ -201,46 +229,46 @@ class Expenses extends Budget {
     epen.appendChild(divEle);
   }
 
-  // =======================================
+  // ======================================= change when use replaceChild... (kam vadhe chhe to ) use
 
-  createUpdatedDiv(obj) {
-    const divEle = document.createElement("div");
-    divEle.setAttribute("id", `row ${obj.id}`);
+  // createUpdatedDiv(obj) {
+  //   const divEle = document.createElement("div");
+  //   divEle.setAttribute("id", `row ${obj.id}`);
 
-    const namespan = document.createElement("span");
-    namespan.textContent = obj.name;
+  //   const namespan = document.createElement("span");
+  //   namespan.textContent = obj.name;
 
-    const amtspan = document.createElement("span");
-    amtspan.textContent = obj.amount;
+  //   const amtspan = document.createElement("span");
+  //   amtspan.textContent = obj.amount;
 
-    const namebtn = document.createElement("button");
-    namebtn.textContent = "X";
-    const amtbtn = document.createElement("button");
-    amtbtn.textContent = "E";
+  //   const namebtn = document.createElement("button");
+  //   namebtn.textContent = "X";
+  //   const amtbtn = document.createElement("button");
+  //   amtbtn.textContent = "E";
 
-    amtbtn.addEventListener("click", () => {
-      this.Expenses_name.value = obj.name;
-      this.Expenses_amt.value = obj.amount;
-      this.update = obj.id;
-    });
+  //   amtbtn.addEventListener("click", () => {
+  //     this.Expenses_name.value = obj.name;
+  //     this.Expenses_amt.value = obj.amount;
+  //     this.update = obj.id;
+  //   });
 
-    namebtn.addEventListener("click", () => {
-      divEle.remove();
-      const locaExp = JSON.parse(localStorage.getItem("expence"));
-      const exvalue = locaExp.filter((v) => v.id !== obj.id);
-      localStorage.setItem("expence", JSON.stringify(exvalue));
-      this.handledata();
-    });
+  //   namebtn.addEventListener("click", () => {
+  //     divEle.remove();
+  //     const locaExp = JSON.parse(localStorage.getItem("expence"));
+  //     const exvalue = locaExp.filter((v) => v.id !== obj.id);
+  //     localStorage.setItem("expence", JSON.stringify(exvalue));
+  //     this.handledata();
+  //   });
 
-    divEle.appendChild(namespan);
-    divEle.appendChild(amtspan);
-    divEle.appendChild(namebtn);
-    divEle.appendChild(amtbtn);
+  //   divEle.appendChild(namespan);
+  //   divEle.appendChild(amtspan);
+  //   divEle.appendChild(namebtn);
+  //   divEle.appendChild(amtbtn);
 
-    return divEle;
-  }
+  //   return divEle;
+  // }
 
-  // ==========================================
+  // ========================================== change
 }
 
 const e1 = new Expenses();
