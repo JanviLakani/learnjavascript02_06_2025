@@ -552,8 +552,11 @@ first(10)
   })
   .then((r3) => console.log(r3)
   )
+// https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en // formate cromm apli jova mate 
+//   https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en&pli=1 
+// https://fakestoreapi.com/docs 
 
-  
+// https://fakestoreapi.com/ 
 
 // 1. Promise Style:
 
