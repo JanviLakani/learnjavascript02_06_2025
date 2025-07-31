@@ -53,6 +53,8 @@ const handlesubmit = () => {
   const liElement = document.createElement("li"); 
   const cityText = document.createTextNode(city); 
 
+  
+
   liElement.appendChild(cityText); 
   const diskDiv = document.getElementById("disk"); 
 
@@ -66,6 +68,8 @@ const handlesubmit = () => {
     deletebtn.addEventListener("click" ,function (){
         liElement.remove();
     })
+
+
 
    
 
